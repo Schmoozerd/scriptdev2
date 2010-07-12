@@ -24,6 +24,21 @@ EndScriptData */
 #include "precompiled.h"
 #include "zulaman.h"
 
+enum
+{
+    NPC_AKILZON         = 23574,
+    NPC_NALORAKK        = 23576,
+    NPC_JANALAI         = 23578,
+    NPC_HALAZZI         = 23577,
+    NPC_MALACRASS       = 24239,
+    NPC_ZULJIN          = 23863,
+    NPC_HARRISON        = 24358,
+
+    GO_STRANGE_GONG     = 187359,
+    GO_MASSIVE_GATE     = 186728,
+    GO_HEXLORD_ENTRANCE = 186305,
+};
+
 struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
 {
     instance_zulaman(Map* pMap) : ScriptedInstance(pMap) {Initialize();}
@@ -86,13 +101,13 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
     {
         switch(pCreature->GetEntry())
         {
-            case 23574: m_uiAkilzonGUID     = pCreature->GetGUID(); break;
-            case 23576: m_uiNalorakkGUID    = pCreature->GetGUID(); break;
-            case 23578: m_uiJanalaiGUID     = pCreature->GetGUID(); break;
-            case 23577: m_uiHalazziGUID     = pCreature->GetGUID(); break;
-            case 23863: m_uiZuljinGUID      = pCreature->GetGUID(); break;
-            case 24239: m_uiMalacrassGUID   = pCreature->GetGUID(); break;
-            case 24358: m_uiHarrisonGUID    = pCreature->GetGUID(); break;
+            case NPC_AKILZON:     m_uiAkilzonGUID     = pCreature->GetGUID(); break;
+            case NPC_NALORAKK:    m_uiNalorakkGUID    = pCreature->GetGUID(); break;
+            case NPC_JANALAI:     m_uiJanalaiGUID     = pCreature->GetGUID(); break;
+            case NPC_HALAZZI:     m_uiHalazziGUID     = pCreature->GetGUID(); break;
+            case NPC_MALACRASS:   m_uiMalacrassGUID   = pCreature->GetGUID(); break;
+            case NPC_ZULJIN:      m_uiZuljinGUID      = pCreature->GetGUID(); break;
+            case NPC_HARRISON:    m_uiHarrisonGUID    = pCreature->GetGUID(); break;
             case NPC_SPIRIT_LYNX: m_uiSpiritLynxGUID  = pCreature->GetGUID(); break;
             case NPC_EGG:
                 if (m_auiEncounter[3] != DONE)
@@ -105,16 +120,18 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
     {
         switch(pGo->GetEntry())
         {
-            case 187359:
+            case GO_STRANGE_GONG:
                 m_uiStrangeGongGUID = pGo->GetGUID();
                 break;
-            case 186728:
+            case GO_MASSIVE_GATE:
                 m_uiMassiveGateGUID = pGo->GetGUID();
-                if (m_auiEncounter[0] == IN_PROGRESS || m_auiEncounter[0] == DONE)
+                if (m_auiEncounter[0] == IN_PROGRESS || m_auiEncounter[0] == DONE || m_auiEncounter[0] == FAIL)
                     pGo->SetGoState(GO_STATE_ACTIVE);
                 break;
-            case 186305:
+            case GO_HEXLORD_ENTRANCE:
                 m_uiMalacrassEntranceGUID = pGo->GetGUID();
+                if (GetKilledPreBosses() == 4)
+                    pGo->SetGoState(GO_STATE_ACTIVE);
                 break;
         }
     }
@@ -135,8 +152,8 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 if (uiData == IN_PROGRESS)
                 {
                     DoUseDoorOrButton(m_uiMassiveGateGUID);
-                    DoUpdateWorldState(WORLD_STATE_COUNTER,m_uiEventMinuteStep);
-                    DoUpdateWorldState(WORLD_STATE_ID,1);
+                    DoUpdateWorldState(WORLD_STATE_COUNTER, m_uiEventMinuteStep);
+                    DoUpdateWorldState(WORLD_STATE_ID, 1);
                     m_auiEncounter[0] = uiData;
                 }
                 break;
@@ -188,10 +205,10 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
             case TYPE_HALAZZI:
                 m_auiEncounter[4] = uiData;
                 break;
-            case TYPE_ZULJIN:
+            case TYPE_MALACRASS:
                 m_auiEncounter[5] = uiData;
                 break;
-            case TYPE_MALACRASS:
+            case TYPE_ZULJIN:
                 m_auiEncounter[6] = uiData;
                 break;
 
@@ -213,8 +230,7 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 break;
         }
 
-        if (m_auiEncounter[1] == DONE && m_auiEncounter[2] == DONE && m_auiEncounter[3] == DONE &&
-            m_auiEncounter[4] == DONE && m_auiEncounter[5] != IN_PROGRESS)
+        if (GetKilledPreBosses() == 4 && m_auiEncounter[5] == NOT_STARTED)
             DoUseDoorOrButton(m_uiMalacrassEntranceGUID);
 
         if (uiData == DONE || (uiType == TYPE_EVENT_RUN && uiData == IN_PROGRESS))
@@ -324,6 +340,11 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
         return 0;
     }
 
+    uint8 GetKilledPreBosses()
+    {
+        return (GetData(TYPE_AKILZON) == DONE) + (GetData(DATA_NALORAKK) == DONE) + (GetData(DATA_JANALAI) == DONE) + (GetData(DATA_HALAZZI) == DONE);
+    }
+
     void Update(uint32 uiDiff)
     {
         if (GetData(TYPE_EVENT_RUN) == IN_PROGRESS)
@@ -333,7 +354,7 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 if (m_uiEventMinuteStep == 0)
                 {
                     debug_log("SD2: Instance Zulaman: event time reach end, event failed.");
-                    m_auiEncounter[0] = FAIL;
+                    SetData(TYPE_EVENT_RUN, FAIL);
                     return;
                 }
 
