@@ -95,3 +95,17 @@ enum BossToChestIndex
 };
 
 #endif
+
+/* A few notes about spells:
+** Ahli Encounter
+http://www.wowhead.com/spell=43515 Ashli Fireball
+http://www.wowhead.com/spell=43520 Ashli Fireball 1
+http://www.wowhead.com/spell=43525 Ashli Fireball 2
+http://www.wowhead.com/spell=46440 Ashli Fireball Test
+43552 - Jar explosion visual, needed for Ashli Event, looks good
+
+
+** Summon Gos
+43756 Summon Amani Charm Chest (a few related)
+http://www.wowhead.com/spell=43774 Summon Money Bag
+*/

@@ -16,8 +16,8 @@
 
 /* ScriptData
 SDName: Instance_Zulaman
-SD%Complete: 25
-SDComment:
+SD%Complete: 50
+SDComment: Support for Quests and Mini-Events still TODO
 SDCategory: Zul'Aman
 EndScriptData */
 
@@ -311,13 +311,13 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
         loadStream >> m_auiEncounter[0] >> m_auiEncounter[1] >> m_auiEncounter[2] >> m_auiEncounter[3]
             >> m_auiEncounter[4] >> m_auiEncounter[5] >> m_auiEncounter[6] >> m_auiEncounter[7];
 
-        //not changing m_uiEncounter[0], TYPE_EVENT_RUN must not reset to NOT_STARTED
         for (uint8 i = 1; i < MAX_ENCOUNTER; ++i)
         {
             if (m_auiEncounter[i] == IN_PROGRESS)
                 m_auiEncounter[i] = NOT_STARTED;
         }
 
+        // restart TYPE_EVENT_RUN if was already started
         if (m_auiEncounter[7] != 0 && m_auiEncounter[0] != DONE && m_auiEncounter[0] != FAIL)
             SetData(TYPE_EVENT_RUN, IN_PROGRESS);
 
