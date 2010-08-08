@@ -94,6 +94,15 @@ enum BossToChestIndex
     INDEX_AKILZON           = 3
 };
 
+enum RunEventSteps
+{
+    RUN_START               = 1,
+    RUN_FAIL                = 2,
+    RUN_DONE                = 3,
+    RUN_PROGRESS            = 4,
+    RUN_FAIL_SOON           = 5
+};
+
 #endif
 
 /* A few notes about spells:

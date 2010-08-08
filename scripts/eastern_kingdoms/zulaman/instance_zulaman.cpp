@@ -150,6 +150,7 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 }
                 if (uiData == IN_PROGRESS)
                 {
+                    DoTimeRunSay(RUN_START);
                     DoUseDoorOrButton(m_uiMassiveGateGUID);
                     if (m_auiEncounter[7])
                         SetData(TYPE_RUN_EVENT_TIME, m_auiEncounter[7]);
@@ -159,6 +160,7 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 }
                 if (uiData == FAIL)
                 {
+                    DoTimeRunSay(RUN_FAIL);
                     DoUpdateWorldState(WORLD_STATE_ID, 0);
                     // Kill remaining Event NPCs
                     for (uint8 i = 0; i < MAX_CHESTS; i++)
@@ -167,7 +169,10 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                                 pCreature->ForcedDespawn();
                 }
                 if (uiData == DONE)
+                {
+                    DoTimeRunSay(RUN_DONE);
                     DoUpdateWorldState(WORLD_STATE_ID, 0);
+                }
                 m_auiEncounter[0] = uiData;
                 break;
             case TYPE_AKILZON:
@@ -269,11 +274,15 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 break;
         }
 
-        if (GetKilledPreBosses() == 4 && (uiType == TYPE_AKILZON || uiType == TYPE_NALORAKK || uiType == TYPE_JANALAI || uiType == TYPE_HALAZZI))
+        if (uiData == DONE && (uiType == TYPE_AKILZON || uiType == TYPE_NALORAKK || uiType == TYPE_JANALAI || uiType == TYPE_HALAZZI))
         {
-            DoUseDoorOrButton(m_uiMalacrassEntranceGUID);
-            if (m_auiEncounter[0] == IN_PROGRESS)
-                SetData(TYPE_EVENT_RUN, DONE);
+            DoTimeRunSay(RUN_PROGRESS);
+            if (GetKilledPreBosses() == 4)
+            {
+                DoUseDoorOrButton(m_uiMalacrassEntranceGUID);
+                if (m_auiEncounter[0] == IN_PROGRESS)
+                    SetData(TYPE_EVENT_RUN, DONE);
+            }
         }
 
         if (uiData == DONE || uiType == TYPE_RUN_EVENT_TIME)
@@ -390,6 +399,37 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
         return (GetData(TYPE_AKILZON) == DONE) + (GetData(TYPE_NALORAKK) == DONE) + (GetData(TYPE_JANALAI) == DONE) + (GetData(TYPE_HALAZZI) == DONE);
     }
 
+    void DoTimeRunSay(RunEventSteps uiData)
+    {
+        Creature* pHexlord = instance->GetCreature(m_uiMalacrassGUID);
+        if (!pHexlord)
+            return;
+
+        switch (uiData)
+        {
+            case RUN_START:     DoScriptText(SAY_INST_BEGIN, pHexlord); break;
+            case RUN_FAIL:      DoScriptText(urand(0, 1) ? SAY_INST_SACRIF1 : SAY_INST_SACRIF2, pHexlord); break;
+            case RUN_DONE:      DoScriptText(SAY_INST_COMPLETE, pHexlord); break;
+            case RUN_PROGRESS:
+                switch (GetKilledPreBosses())
+                {
+                    case 1:     DoScriptText(SAY_INST_PROGRESS_1, pHexlord); break;
+                    case 2:     DoScriptText(SAY_INST_PROGRESS_2, pHexlord); break;
+                    case 3:     DoScriptText(SAY_INST_PROGRESS_3, pHexlord); break;
+                }
+                break;
+            case RUN_FAIL_SOON:
+                switch (GetKilledPreBosses())
+                {
+                    case 0:     DoScriptText(SAY_INST_WARN_1, pHexlord); break;
+                    case 1:     DoScriptText(SAY_INST_WARN_2, pHexlord); break;
+                    case 2:     DoScriptText(SAY_INST_WARN_3, pHexlord); break;
+                    case 3:     DoScriptText(SAY_INST_WARN_4, pHexlord); break;
+                }
+                break;
+        }
+    }
+
     void DoChestEvent(BossToChestIndex uiIndex)
     {
         // related NPC:     m_auiEventChestNpcGUIDs[uiIndex]
@@ -423,6 +463,9 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
         {
             if (m_uiEventTimer <= uiDiff)
             {
+                if (m_auiEncounter[7] == 5)                 // TODO, verify 5min for warning texts
+                    DoTimeRunSay(RUN_FAIL_SOON);
+
                 if (m_auiEncounter[7] == 0)
                 {
                     debug_log("SD2: Instance Zulaman: event time reach end, event failed.");
