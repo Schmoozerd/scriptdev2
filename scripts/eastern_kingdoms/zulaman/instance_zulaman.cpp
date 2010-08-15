@@ -33,6 +33,7 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
     uint8 m_auiChestPosition[MAX_CHESTS];                   // stores, when which chest was enabled for looting- TODO, save to DB?
     uint64 m_auiChestGUIDs[MAX_CHESTS];
     uint64 m_auiEventChestNpcGUIDs[MAX_CHESTS];
+    uint64 m_auiEventChestNpcCageGUIDs[MAX_CHESTS];
     std::string strInstData;
 
     uint32 m_uiEventTimer;
@@ -50,7 +51,12 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
 
     uint64 m_uiStrangeGongGUID;
     uint64 m_uiMassiveGateGUID;
+    uint64 m_uiWindDoorGUID;
+    uint64 m_uiLynxTempleEntranceGUID;
+    uint64 m_uiLynxTempleExitGUID;
     uint64 m_uiMalacrassEntranceGUID;
+    uint64 m_uiWoodenDoorGUID;
+    uint64 m_uiFireDoorGUID;
 
     std::list<uint64> m_lEggsGUIDList;
     uint32 m_uiEggsRemainingCount_Left;
@@ -78,7 +84,12 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
 
         m_uiStrangeGongGUID = 0;
         m_uiMassiveGateGUID = 0;
+        m_uiWindDoorGUID = 0;
+        m_uiLynxTempleEntranceGUID = 0;
+        m_uiLynxTempleExitGUID = 0;
         m_uiMalacrassEntranceGUID = 0;
+        m_uiWoodenDoorGUID = 0;
+        m_uiFireDoorGUID = 0;
 
         m_lEggsGUIDList.clear();
         m_uiEggsRemainingCount_Left = 20;
@@ -122,10 +133,29 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 if (m_auiEncounter[0] == DONE || m_auiEncounter[0] == FAIL)
                     pGo->SetGoState(GO_STATE_ACTIVE);
                 break;
+            case GO_WIND_DOOR:
+                m_uiWindDoorGUID = pGo->GetGUID();
+                break;
+            case GO_LYNX_TEMPLE_ENTRANCE:
+                m_uiLynxTempleEntranceGUID = pGo->GetGUID();
+                break;
+            case GO_LYNX_TEMPLE_EXIT:
+                m_uiLynxTempleExitGUID = pGo->GetGUID();
+                if (m_auiEncounter[4] == DONE)
+                    pGo->SetGoState(GO_STATE_ACTIVE);
+                break;
             case GO_HEXLORD_ENTRANCE:
                 m_uiMalacrassEntranceGUID = pGo->GetGUID();
                 if (GetKilledPreBosses() == 4)
                     pGo->SetGoState(GO_STATE_ACTIVE);
+                break;
+            case GO_WOODEN_DOOR:
+                m_uiWoodenDoorGUID = pGo->GetGUID();
+                if (m_auiEncounter[5] == DONE)
+                    pGo->SetGoState(GO_STATE_ACTIVE);
+                break;
+            case GO_FIRE_DOOR:
+                m_uiFireDoorGUID = pGo->GetGUID();
                 break;
             case GO_TANZARS_TRUNK:   m_auiChestGUIDs[0] = pGo->GetGUID(); break;
             case GO_KRAZS_PACKAGE:   m_auiChestGUIDs[1] = pGo->GetGUID(); break;
@@ -176,11 +206,12 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 m_auiEncounter[0] = uiData;
                 break;
             case TYPE_AKILZON:
+                DoUseDoorOrButton(m_uiWindDoorGUID);
                 if (uiData == DONE)
                 {
                     if (m_auiEncounter[0] == IN_PROGRESS)
                     {
-                        m_auiEncounter[7] += MINUTE/6;    //add 10 minutes
+                        m_auiEncounter[7] += MINUTE/6;      // add 10 minutes
                         SetData(TYPE_RUN_EVENT_TIME, m_auiEncounter[7]);
                         // Store Kill order
                         m_auiChestPosition[INDEX_AKILZON] = GetKilledPreBosses() + 1;
@@ -234,8 +265,10 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 m_auiEncounter[3] = uiData;
                 break;
             case TYPE_HALAZZI:
+                DoUseDoorOrButton(m_uiLynxTempleEntranceGUID);
                 if (uiData == DONE)
                 {
+                    DoUseDoorOrButton(m_uiLynxTempleExitGUID);
                     // Store Kill order
                     if (m_auiEncounter[0] == IN_PROGRESS)
                     {
@@ -246,9 +279,13 @@ struct MANGOS_DLL_DECL instance_zulaman : public ScriptedInstance
                 m_auiEncounter[4] = uiData;
                 break;
             case TYPE_MALACRASS:
+                DoUseDoorOrButton(m_uiMalacrassEntranceGUID);
+                if (uiData == DONE)
+                    DoUseDoorOrButton(m_uiWoodenDoorGUID);
                 m_auiEncounter[5] = uiData;
                 break;
             case TYPE_ZULJIN:
+                DoUseDoorOrButton(m_uiFireDoorGUID);
                 m_auiEncounter[6] = uiData;
                 break;
             case TYPE_J_EGGS_RIGHT:

@@ -78,12 +78,26 @@ enum InstanceZA
 
     GO_STRANGE_GONG         = 187359,
     GO_MASSIVE_GATE         = 186728,
+    GO_WIND_DOOR            = 186858,
+    GO_LYNX_TEMPLE_ENTRANCE = 186304,
+    GO_LYNX_TEMPLE_EXIT     = 186303,
     GO_HEXLORD_ENTRANCE     = 186305,
+    GO_WOODEN_DOOR          = 186306,
+    GO_FIRE_DOOR            = 186859,
 
     GO_TANZARS_TRUNK        = 186648,
     GO_KRAZS_PACKAGE        = 186667,
     GO_ASHLIS_BAG           = 186672,
     GO_HARKORS_SATCHEL      = 187021,
+
+    GO_LOOT_BOX_DWARF       = 186622,
+    GO_KRAZS_CHEST          = 186658,
+    GO_ASHLIS_VASE          = 186671,
+
+    GO_TANZARS_CAGE         = 187377,
+    GO_HARKORS_CAGE         = 187378,
+    GO_KRAZS_CAGE           = 187379,
+    GO_ASHLIS_CAGE          = 187380,
 };
 
 enum BossToChestIndex
