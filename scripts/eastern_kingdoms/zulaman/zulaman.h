@@ -6,6 +6,9 @@
 #define DEF_ZULAMAN_H
 
 /* Database Condition IDs for the Chest-loot: (1-16)
+*
+* Actually this way is to be removed as too dirty!
+*
 ** 1,2,3,4 to check, if the first chest should contain loot 1,2,3 or 4  tanzar  (bear)
 ** 5,6,7,8 to check, if the second chest should contain loot 1,2,3 or 4 kraz    (phoenix)
 ** 9,10,11,12 for the third chest                                       ashli   (lynx)
