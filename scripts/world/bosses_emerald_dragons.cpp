@@ -608,40 +608,26 @@ CreatureAI* GetAI_mob_dementeddruids(Creature* pCreature)
 
 void AddSC_bosses_emerald_dragons()
 {
-    Script* pNewScript;
+    ScriptRegistry pScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_emeriss";
-    pNewScript->GetAI = &GetAI_boss_emeriss;
-    pNewScript->RegisterSelf();
+    pScript.newScript("boss_emeriss");
+    pScript->GetAI = &GetAI_boss_emeriss;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lethon";
-    pNewScript->GetAI = &GetAI_boss_lethon;
-    pNewScript->RegisterSelf();
+    pScript.newScript("boss_lethon");
+    pScript->GetAI = &GetAI_boss_lethon;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_spirit_shade";
-    pNewScript->GetAI = &GetAI_npc_spirit_shade;
-    pNewScript->RegisterSelf();
+    pScript.newScript("npc_spirit_shade");
+    pScript->GetAI = &GetAI_npc_spirit_shade;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_taerar";
-    pNewScript->GetAI = &GetAI_boss_taerar;
-    pNewScript->RegisterSelf();
+    pScript.newScript("boss_taerar");
+    pScript->GetAI = &GetAI_boss_taerar;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_shade_of_taerar";
-    pNewScript->GetAI = &GetAI_boss_shadeoftaerar;
-    pNewScript->RegisterSelf();
+    pScript.newScript("boss_shade_of_taerar");
+    pScript->GetAI = &GetAI_boss_shadeoftaerar;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ysondre";
-    pNewScript->GetAI = &GetAI_boss_ysondre;
-    pNewScript->RegisterSelf();
+    pScript.newScript("boss_ysondre");
+    pScript->GetAI = &GetAI_boss_ysondre;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_dementeddruids";
-    pNewScript->GetAI = &GetAI_mob_dementeddruids;
-    pNewScript->RegisterSelf();
+    pScript.newScript("mob_dementeddruids");
+    pScript->GetAI = &GetAI_mob_dementeddruids;
 }

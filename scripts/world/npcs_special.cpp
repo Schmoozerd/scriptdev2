@@ -1743,78 +1743,53 @@ bool EffectDummyCreature_npc_redemption_target(Unit* pCaster, uint32 uiSpellId, 
 
 void AddSC_npcs_special()
 {
-    Script* pNewScript;
+    ScriptRegistry pScript;
+
+    pScript.newScript("npc_air_force_bots");
+    pScript->GetAI = &GetAI_npc_air_force_bots;
+
+    pScript.newScript("npc_chicken_cluck");
+    pScript->GetAI = &GetAI_npc_chicken_cluck;
+    pScript->pQuestAcceptNPC = &QuestAccept_npc_chicken_cluck;
+    pScript->pQuestRewardedNPC = &QuestRewarded_npc_chicken_cluck;
+
+    pScript.newScript("npc_dancing_flames");
+    pScript->GetAI = &GetAI_npc_dancing_flames;
+
+    pScript.newScript("npc_injured_patient");
+    pScript->GetAI = &GetAI_npc_injured_patient;
+
+    pScript.newScript("npc_doctor");
+    pScript->GetAI = &GetAI_npc_doctor;
+    pScript->pQuestAcceptNPC = &QuestAccept_npc_doctor;
+
+    pScript.newScript("npc_garments_of_quests");
+    pScript->GetAI = &GetAI_npc_garments_of_quests;
+
+    pScript.newScript("npc_guardian");
+    pScript->GetAI = &GetAI_npc_guardian;
+
+    pScript.newScript("npc_innkeeper", false);  // script and error report disabled, but script can be used for custom needs, adding ScriptName
+    pScript->pGossipHello = &GossipHello_npc_innkeeper;
+    pScript->pGossipSelect = &GossipSelect_npc_innkeeper;
+
+    pScript.newScript("npc_mount_vendor");
+    pScript->pGossipHello = &GossipHello_npc_mount_vendor;
+    pScript->pGossipSelect = &GossipSelect_npc_mount_vendor;
+
+    pScript.newScript("npc_sayge");
+    pScript->pGossipHello = &GossipHello_npc_sayge;
+    pScript->pGossipSelect = &GossipSelect_npc_sayge;
+
+    pScript.newScript("npc_tabard_vendor");
+    pScript->pGossipHello = &GossipHello_npc_tabard_vendor;
+    pScript->pGossipSelect = &GossipSelect_npc_tabard_vendor;
+
+    pScript.newScript("npc_spring_rabbit");
+    pScript->GetAI = &GetAI_npc_spring_rabbit;
 
     pNewScript = new Script;
-    pNewScript->Name = "npc_air_force_bots";
-    pNewScript->GetAI = &GetAI_npc_air_force_bots;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_chicken_cluck";
-    pNewScript->GetAI = &GetAI_npc_chicken_cluck;
-    pNewScript->pQuestAcceptNPC =   &QuestAccept_npc_chicken_cluck;
-    pNewScript->pQuestRewardedNPC = &QuestRewarded_npc_chicken_cluck;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dancing_flames";
-    pNewScript->GetAI = &GetAI_npc_dancing_flames;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_injured_patient";
-    pNewScript->GetAI = &GetAI_npc_injured_patient;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_doctor";
-    pNewScript->GetAI = &GetAI_npc_doctor;
-    pNewScript->pQuestAcceptNPC = &QuestAccept_npc_doctor;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_garments_of_quests";
-    pNewScript->GetAI = &GetAI_npc_garments_of_quests;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_guardian";
-    pNewScript->GetAI = &GetAI_npc_guardian;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_innkeeper";
-    pNewScript->pGossipHello = &GossipHello_npc_innkeeper;
-    pNewScript->pGossipSelect = &GossipSelect_npc_innkeeper;
-    pNewScript->RegisterSelf(false);                        // script and error report disabled, but script can be used for custom needs, adding ScriptName
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_mount_vendor";
-    pNewScript->pGossipHello =  &GossipHello_npc_mount_vendor;
-    pNewScript->pGossipSelect = &GossipSelect_npc_mount_vendor;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_sayge";
-    pNewScript->pGossipHello = &GossipHello_npc_sayge;
-    pNewScript->pGossipSelect = &GossipSelect_npc_sayge;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_tabard_vendor";
-    pNewScript->pGossipHello =  &GossipHello_npc_tabard_vendor;
-    pNewScript->pGossipSelect = &GossipSelect_npc_tabard_vendor;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_spring_rabbit";
-    pNewScript->GetAI = &GetAI_npc_spring_rabbit;
-    pNewScript->RegisterSelf();
-
-    pNewScript = new Script;
-    pNewScript->Name = "npc_redemption_target";
-    pNewScript->GetAI = &GetAI_npc_redemption_target;
-    pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_redemption_target;
-    pNewScript->RegisterSelf();
+    pScript.newScript("npc_redemption_target");
+    pScript->GetAI = &GetAI_npc_redemption_target;
+    pScript->pEffectDummyNPC = &EffectDummyCreature_npc_redemption_target;
 }
