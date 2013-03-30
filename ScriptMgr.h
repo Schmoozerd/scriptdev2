@@ -61,7 +61,8 @@ enum EscortFaction
 
 struct Script
 {
-    Script() :
+    Script(const char* _Name) :
+        Name(_Name),
         pGossipHello(NULL), pGossipHelloGO(NULL), pGossipSelect(NULL), pGossipSelectGO(NULL),
         pGossipSelectWithCode(NULL), pGossipSelectGOWithCode(NULL),
         pDialogStatusNPC(NULL), pDialogStatusGO(NULL),
