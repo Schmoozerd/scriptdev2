@@ -1788,7 +1788,6 @@ void AddSC_npcs_special()
     pScript.newScript("npc_spring_rabbit");
     pScript->GetAI = &GetAI_npc_spring_rabbit;
 
-    pNewScript = new Script;
     pScript.newScript("npc_redemption_target");
     pScript->GetAI = &GetAI_npc_redemption_target;
     pScript->pEffectDummyNPC = &EffectDummyCreature_npc_redemption_target;
