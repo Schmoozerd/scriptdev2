@@ -321,6 +321,8 @@ void Script::RegisterSelf(bool bReportError)
 
 Script* ScriptRegistry::newScript(const char* scriptName, bool reportError/*=true*/)
 {
+    Register(); // register last added script (if any)
+
     m_script = new Script(scriptName);
     m_reportError = reportError;
     return m_script;
