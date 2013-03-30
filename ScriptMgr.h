@@ -104,6 +104,31 @@ struct Script
 };
 
 // *********************************************************
+// ******************* ScriptRegistry **************************
+
+class ScriptRegistry
+{
+    public:
+        ScriptRegistry() : m_script(NULL), m_reportError(true) {}
+        ScriptRegistry(const char* scriptName, bool reportError = true) : m_script(NULL) { newScript(scriptName, reportError); }
+        ~ScriptRegistry() { Register(); }
+
+        Script* newScript(const char* scriptName, bool reportError = true);
+
+        Script* operator -> ()
+        {
+            MANGOS_ASSERT(m_script != NULL && "ScriptRegistry: use newScript() before!");
+            return m_script;
+        }
+
+    private:
+        Script* m_script;
+        bool m_reportError;
+
+        void Register();
+};
+
+// *********************************************************
 // ************* Some functions used globally **************
 
 // Generic scripting text function
