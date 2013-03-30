@@ -532,8 +532,7 @@ void AddSC_instance_trial_of_the_crusader()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_trial_of_the_crusader";
+    pNewScript = new Script("instance_trial_of_the_crusader");
     pNewScript->GetInstanceData = &GetInstanceData_instance_trial_of_the_crusader;
     pNewScript->RegisterSelf();
 }

@@ -1672,57 +1672,47 @@ void AddSC_shadowmoon_valley()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_mature_netherwing_drake";
+    pNewScript = new Script("mob_mature_netherwing_drake");
     pNewScript->GetAI = &GetAI_mob_mature_netherwing_drake;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_enslaved_netherwing_drake";
+    pNewScript = new Script("mob_enslaved_netherwing_drake");
     pNewScript->GetAI = &GetAI_mob_enslaved_netherwing_drake;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dragonmaw_peon";
+    pNewScript = new Script("npc_dragonmaw_peon");
     pNewScript->GetAI = &GetAI_npc_dragonmaw_peon;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_dragonmaw_peon;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_wilda";
+    pNewScript = new Script("npc_wilda");
     pNewScript->GetAI = &GetAI_npc_wilda;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_wilda;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lord_illidan_stormrage";
+    pNewScript = new Script("npc_lord_illidan_stormrage");
     pNewScript->GetAI = &GetAI_npc_lord_illidan_stormrage;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_torloth";
+    pNewScript = new Script("mob_torloth");
     pNewScript->GetAI = &GetAI_mob_torloth;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_totem_of_spirits";
+    pNewScript = new Script("npc_totem_of_spirits");
     pNewScript->GetAI = &GetAI_npc_totem_of_spirits;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_totem_of_spirits;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_npc_totem_of_spirits;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_soul_captured_credit";
+    pNewScript = new Script("event_spell_soul_captured_credit");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_soul_captured_credit;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_crystal_prison";
+    pNewScript = new Script("go_crystal_prison");
     pNewScript->pQuestAcceptGO = &GOQuestAccept_GO_crystal_prison;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_spawned_oronok_tornheart";
+    pNewScript = new Script("npc_spawned_oronok_tornheart");
     pNewScript->GetAI = &GetAI_npc_spawned_oronok_tornheart;
     pNewScript->pGossipHello =  &GossipHello_npc_spawned_oronok_tornheart;
     pNewScript->pGossipSelect = &GossipSelect_npc_spawned_oronok_tornheart;

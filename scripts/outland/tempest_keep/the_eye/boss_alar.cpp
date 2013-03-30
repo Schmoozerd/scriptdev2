@@ -351,8 +351,7 @@ void AddSC_boss_alar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_alar";
+    pNewScript = new Script("boss_alar");
     pNewScript->GetAI = &GetAI_boss_alar;
     pNewScript->RegisterSelf();
 }

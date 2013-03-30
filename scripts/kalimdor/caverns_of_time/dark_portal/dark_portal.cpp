@@ -352,14 +352,12 @@ void AddSC_dark_portal()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_medivh_black_morass";
+    pNewScript = new Script("npc_medivh_black_morass");
     pNewScript->GetAI = &GetAI_npc_medivh_black_morass;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_medivh_black_morass;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_time_rift";
+    pNewScript = new Script("npc_time_rift");
     pNewScript->GetAI = &GetAI_npc_time_rift;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_time_rift_channel;
     pNewScript->RegisterSelf();

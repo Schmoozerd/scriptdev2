@@ -693,36 +693,30 @@ void AddSC_dustwallow_marsh()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mobs_risen_husk_spirit";
+    pNewScript = new Script("mobs_risen_husk_spirit");
     pNewScript->GetAI = &GetAI_mobs_risen_husk_spirit;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_restless_apparition";
+    pNewScript = new Script("npc_restless_apparition");
     pNewScript->GetAI = &GetAI_npc_restless_apparition;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_morokk";
+    pNewScript = new Script("npc_morokk");
     pNewScript->GetAI = &GetAI_npc_morokk;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_morokk;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ogron";
+    pNewScript = new Script("npc_ogron");
     pNewScript->GetAI = &GetAI_npc_ogron;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_ogron;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_private_hendel";
+    pNewScript = new Script("npc_private_hendel");
     pNewScript->GetAI = &GetAI_npc_private_hendel;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_private_hendel;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_nats_landing";
+    pNewScript = new Script("at_nats_landing");
     pNewScript->pAreaTrigger = &AreaTrigger_at_nats_landing;
     pNewScript->RegisterSelf();
 }

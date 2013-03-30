@@ -362,28 +362,23 @@ void AddSC_boss_varos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_varos";
+    pNewScript = new Script("boss_varos");
     pNewScript->GetAI = &GetAI_boss_varos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_call_captain";
+    pNewScript = new Script("event_spell_call_captain");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_call_captain;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_azure_ring_captain";
+    pNewScript = new Script("npc_azure_ring_captain");
     pNewScript->GetAI = &GetAI_npc_azure_ring_captain;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_arcane_beam";
+    pNewScript = new Script("npc_arcane_beam");
     pNewScript->GetAI = &GetAI_npc_arcane_beam;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_centrifuge_core";
+    pNewScript = new Script("npc_centrifuge_core");
     pNewScript->GetAI = &GetAI_npc_centrifuge_core;
     pNewScript->RegisterSelf();
 }

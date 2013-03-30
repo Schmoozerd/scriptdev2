@@ -418,13 +418,11 @@ void AddSC_boss_shade_of_aran()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_shade_of_aran";
+    pNewScript = new Script("boss_shade_of_aran");
     pNewScript->GetAI = &GetAI_boss_aran;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shade_of_aran_blizzard";
+    pNewScript = new Script("npc_shade_of_aran_blizzard");
     pNewScript->GetAI = &GetAI_npc_shade_of_aran_blizzard;
     pNewScript->RegisterSelf();
 }

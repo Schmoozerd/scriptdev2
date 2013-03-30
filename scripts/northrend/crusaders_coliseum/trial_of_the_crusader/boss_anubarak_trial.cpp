@@ -620,24 +620,20 @@ void AddSC_boss_anubarak_trial()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_anubarak_trial";
+    pNewScript = new Script("boss_anubarak_trial");
     pNewScript->GetAI = &GetAI_boss_anubarak_trial;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_anubarak_spike";
+    pNewScript = new Script("npc_anubarak_spike");
     pNewScript->GetAI = &GetAI_npc_anubarak_trial_spike;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_dummy_permafrost;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_frost_sphere";
+    pNewScript = new Script("npc_frost_sphere");
     pNewScript->GetAI = &GetAI_npc_anubarak_trial_frostsphere;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_nerubian_borrow";
+    pNewScript = new Script("npc_nerubian_borrow");
     pNewScript->GetAI = &GetAI_npc_nerubian_borrow;
     pNewScript->RegisterSelf();
 }

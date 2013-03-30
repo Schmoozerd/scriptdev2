@@ -409,18 +409,15 @@ void AddSC_boss_colossus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_drakkari_colossus";
+    pNewScript = new Script("boss_drakkari_colossus");
     pNewScript->GetAI = &GetAI_boss_drakkari_colossus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_drakkari_elemental";
+    pNewScript = new Script("boss_drakkari_elemental");
     pNewScript->GetAI = &GetAI_boss_drakkari_elemental;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_living_mojo";
+    pNewScript = new Script("npc_living_mojo");
     pNewScript->GetAI = &GetAI_npc_living_mojo;
     pNewScript->RegisterSelf();
 }

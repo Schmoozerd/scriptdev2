@@ -423,13 +423,11 @@ void AddSC_boss_ymiron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ymiron";
+    pNewScript = new Script("boss_ymiron");
     pNewScript->GetAI = &GetAI_boss_ymiron;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_achiev_kings_bane";
+    pNewScript = new Script("event_achiev_kings_bane");
     pNewScript->pProcessEventId = &ProcessEventId_event_achiev_kings_bane;
     pNewScript->RegisterSelf();
 }

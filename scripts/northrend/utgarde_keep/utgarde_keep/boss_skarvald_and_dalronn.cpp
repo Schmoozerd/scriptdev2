@@ -322,13 +322,11 @@ void AddSC_boss_skarvald_and_dalronn()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_skarvald";
+    pNewScript = new Script("boss_skarvald");
     pNewScript->GetAI = &GetAI_boss_skarvald;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_dalronn";
+    pNewScript = new Script("boss_dalronn");
     pNewScript->GetAI = &GetAI_boss_dalronn;
     pNewScript->RegisterSelf();
 }

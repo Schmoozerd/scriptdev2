@@ -326,8 +326,7 @@ void AddSC_boss_sapphiron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sapphiron";
+    pNewScript = new Script("boss_sapphiron");
     pNewScript->GetAI = &GetAI_boss_sapphiron;
     pNewScript->RegisterSelf();
 }

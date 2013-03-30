@@ -529,8 +529,7 @@ void AddSC_instance_zulaman()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_zulaman";
+    pNewScript = new Script("instance_zulaman");
     pNewScript->GetInstanceData = &GetInstanceData_instance_zulaman;
     pNewScript->RegisterSelf();
 }

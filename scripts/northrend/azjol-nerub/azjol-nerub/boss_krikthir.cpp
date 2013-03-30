@@ -180,8 +180,7 @@ void AddSC_boss_krikthir()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_krikthir";
+    pNewScript = new Script("boss_krikthir");
     pNewScript->GetAI = &GetAI_boss_krikthir;
     pNewScript->RegisterSelf();
 }

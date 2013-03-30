@@ -249,13 +249,11 @@ void AddSC_instance_zulgurub()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_zulgurub";
+    pNewScript = new Script("instance_zulgurub");
     pNewScript->GetInstanceData = &GetInstanceData_instance_zulgurub;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_zulgurub";
+    pNewScript = new Script("at_zulgurub");
     pNewScript->pAreaTrigger = &AreaTrigger_at_zulgurub;
     pNewScript->RegisterSelf();
 }

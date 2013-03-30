@@ -162,8 +162,7 @@ void AddSC_instance_zulfarrak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_zulfarrak";
+    pNewScript = new Script("instance_zulfarrak");
     pNewScript->GetInstanceData = &GetInstanceData_instance_zulfarrak;
     pNewScript->RegisterSelf();
 }

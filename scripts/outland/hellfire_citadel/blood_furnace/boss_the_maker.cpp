@@ -153,8 +153,7 @@ void AddSC_boss_the_maker()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_the_maker";
+    pNewScript = new Script("boss_the_maker");
     pNewScript->GetAI = &GetAI_boss_the_makerAI;
     pNewScript->RegisterSelf();
 }

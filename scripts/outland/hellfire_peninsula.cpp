@@ -534,31 +534,26 @@ void AddSC_hellfire_peninsula()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_aeranas";
+    pNewScript = new Script("npc_aeranas");
     pNewScript->GetAI = &GetAI_npc_aeranas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ancestral_wolf";
+    pNewScript = new Script("npc_ancestral_wolf");
     pNewScript->GetAI = &GetAI_npc_ancestral_wolf;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_demoniac_scryer";
+    pNewScript = new Script("npc_demoniac_scryer");
     pNewScript->GetAI = &GetAI_npc_demoniac_scryer;
     pNewScript->pGossipHello = &GossipHello_npc_demoniac_scryer;
     pNewScript->pGossipSelect = &GossipSelect_npc_demoniac_scryer;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_wounded_blood_elf";
+    pNewScript = new Script("npc_wounded_blood_elf");
     pNewScript->GetAI = &GetAI_npc_wounded_blood_elf;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_wounded_blood_elf;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_fel_guard_hound";
+    pNewScript = new Script("npc_fel_guard_hound");
     pNewScript->GetAI = &GetAI_npc_fel_guard_hound;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_fel_guard_hound;
     pNewScript->RegisterSelf();

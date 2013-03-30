@@ -215,13 +215,11 @@ void AddSC_boss_amanitar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_amanitar";
+    pNewScript = new Script("boss_amanitar");
     pNewScript->GetAI = &GetAI_boss_amanitar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_amanitar_mushroom";
+    pNewScript = new Script("npc_amanitar_mushroom");
     pNewScript->GetAI = &GetAI_npc_amanitar_mushroom;
     pNewScript->RegisterSelf();
 }

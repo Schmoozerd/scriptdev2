@@ -231,8 +231,7 @@ void AddSC_instance_magisters_terrace()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_magisters_terrace";
+    pNewScript = new Script("instance_magisters_terrace");
     pNewScript->GetInstanceData = &GetInstanceData_instance_magisters_terrace;
     pNewScript->RegisterSelf();
 }

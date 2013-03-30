@@ -324,18 +324,15 @@ void AddSC_boss_rotface()
 {
     Script* pNewscript;
 
-    pNewscript = new Script;
-    pNewscript->Name = "boss_rotface";
+    pNewscript = new Script("boss_rotface");
     pNewscript->GetAI = &GetAI_boss_rotface;
     pNewscript->RegisterSelf();
 
-    pNewscript = new Script;
-    pNewscript->Name = "mob_little_ooze";
+    pNewscript = new Script("mob_little_ooze");
     pNewscript->GetAI = &GetAI_mob_little_ooze;
     pNewscript->RegisterSelf();
 
-    pNewscript = new Script;
-    pNewscript->Name = "mob_big_ooze";
+    pNewscript = new Script("mob_big_ooze");
     pNewscript->GetAI = &GetAI_mob_big_ooze;
     pNewscript->RegisterSelf();
 }

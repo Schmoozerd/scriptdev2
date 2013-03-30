@@ -180,8 +180,7 @@ void AddSC_boss_nexusprince_shaffar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_nexusprince_shaffar";
+    pNewScript = new Script("boss_nexusprince_shaffar");
     pNewScript->GetAI = &GetAI_boss_nexusprince_shaffar;
     pNewScript->RegisterSelf();
 }

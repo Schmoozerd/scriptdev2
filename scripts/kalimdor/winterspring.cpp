@@ -460,14 +460,12 @@ void AddSC_winterspring()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ranshalla";
+    pNewScript = new Script("npc_ranshalla");
     pNewScript->GetAI = &GetAI_npc_ranshalla;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_ranshalla;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_elune_fire";
+    pNewScript = new Script("go_elune_fire");
     pNewScript->pGOUse = &GOUse_go_elune_fire;
     pNewScript->RegisterSelf();
 }

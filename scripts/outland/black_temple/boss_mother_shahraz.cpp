@@ -229,8 +229,7 @@ void AddSC_boss_mother_shahraz()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_mother_shahraz";
+    pNewScript = new Script("boss_mother_shahraz");
     pNewScript->GetAI = &GetAI_boss_shahraz;
     pNewScript->RegisterSelf();
 }

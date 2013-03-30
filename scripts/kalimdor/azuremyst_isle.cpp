@@ -387,25 +387,21 @@ void AddSC_azuremyst_isle()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_draenei_survivor";
+    pNewScript = new Script("npc_draenei_survivor");
     pNewScript->GetAI = &GetAI_npc_draenei_survivor;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_engineer_spark_overgrind";
+    pNewScript = new Script("npc_engineer_spark_overgrind");
     pNewScript->GetAI = &GetAI_npc_engineer_spark_overgrind;
     pNewScript->pGossipHello =  &GossipHello_npc_engineer_spark_overgrind;
     pNewScript->pGossipSelect = &GossipSelect_npc_engineer_spark_overgrind;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_injured_draenei";
+    pNewScript = new Script("npc_injured_draenei");
     pNewScript->GetAI = &GetAI_npc_injured_draenei;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_magwin";
+    pNewScript = new Script("npc_magwin");
     pNewScript->GetAI = &GetAI_npc_magwinAI;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_magwin;
     pNewScript->RegisterSelf();

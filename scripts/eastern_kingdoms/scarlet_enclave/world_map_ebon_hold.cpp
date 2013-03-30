@@ -287,8 +287,7 @@ void AddSC_world_map_ebon_hold()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "world_map_ebon_hold";
+    pNewScript = new Script("world_map_ebon_hold");
     pNewScript->GetInstanceData = &GetInstance_world_map_ebon_hold;
     pNewScript->RegisterSelf();
 }

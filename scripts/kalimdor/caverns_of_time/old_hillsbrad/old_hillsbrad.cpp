@@ -1317,21 +1317,18 @@ void AddSC_old_hillsbrad()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_erozion";
+    pNewScript = new Script("npc_erozion");
     pNewScript->pGossipHello = &GossipHello_npc_erozion;
     pNewScript->pGossipSelect = &GossipSelect_npc_erozion;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_thrall_old_hillsbrad";
+    pNewScript = new Script("npc_thrall_old_hillsbrad");
     pNewScript->GetAI = &GetAI_npc_thrall_old_hillsbrad;
     pNewScript->pGossipHello = &GossipHello_npc_thrall_old_hillsbrad;
     pNewScript->pGossipSelect = &GossipSelect_npc_thrall_old_hillsbrad;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_taretha";
+    pNewScript = new Script("npc_taretha");
     pNewScript->GetAI = &GetAI_npc_taretha;
     pNewScript->pGossipHello = &GossipHello_npc_taretha;
     pNewScript->pGossipSelect = &GossipSelect_npc_taretha;

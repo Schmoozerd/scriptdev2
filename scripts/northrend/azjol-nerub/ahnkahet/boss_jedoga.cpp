@@ -459,13 +459,11 @@ void AddSC_boss_jedoga()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_jedoga";
+    pNewScript = new Script("boss_jedoga");
     pNewScript->GetAI = &GetAI_boss_jedoga;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_twilight_volunteer";
+    pNewScript = new Script("npc_twilight_volunteer");
     pNewScript->GetAI = &GetAI_npc_twilight_volunteer;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_sacrifice_beam;
     pNewScript->RegisterSelf();

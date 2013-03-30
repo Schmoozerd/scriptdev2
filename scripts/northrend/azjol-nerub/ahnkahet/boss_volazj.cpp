@@ -290,8 +290,7 @@ void AddSC_boss_volazj()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_volazj";
+    pNewScript = new Script("boss_volazj");
     pNewScript->GetAI = &GetAI_boss_volazj;
     pNewScript->RegisterSelf();
 }

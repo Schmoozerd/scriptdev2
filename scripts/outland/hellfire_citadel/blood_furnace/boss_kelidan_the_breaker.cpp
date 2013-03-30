@@ -404,13 +404,11 @@ void AddSC_boss_kelidan_the_breaker()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kelidan_the_breaker";
+    pNewScript = new Script("boss_kelidan_the_breaker");
     pNewScript->GetAI = &GetAI_boss_kelidan_the_breaker;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_shadowmoon_channeler";
+    pNewScript = new Script("mob_shadowmoon_channeler");
     pNewScript->GetAI = &GetAI_mob_shadowmoon_channeler;
     pNewScript->RegisterSelf();
 }

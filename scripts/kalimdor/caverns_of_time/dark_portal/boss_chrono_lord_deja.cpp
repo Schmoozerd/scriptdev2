@@ -153,8 +153,7 @@ void AddSC_boss_chrono_lord_deja()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_chrono_lord_deja";
+    pNewScript = new Script("boss_chrono_lord_deja");
     pNewScript->GetAI = &GetAI_boss_chrono_lord_deja;
     pNewScript->RegisterSelf();
 }

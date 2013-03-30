@@ -151,8 +151,7 @@ void AddSC_boss_valithria_dreamwalker()
 {
     Script* pNewscript;
 
-    pNewscript = new Script;
-    pNewscript->Name = "boss_valithria_dreamwalker";
+    pNewscript = new Script("boss_valithria_dreamwalker");
     pNewscript->GetAI = &GetAI_boss_valithria_dreamwalker;
     pNewscript->RegisterSelf();
 }

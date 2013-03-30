@@ -375,13 +375,11 @@ void AddSC_instance_scholomance()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_scholomance";
+    pNewScript = new Script("instance_scholomance");
     pNewScript->GetInstanceData = &GetInstanceData_instance_scholomance;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_gandling_shadow_portal";
+    pNewScript = new Script("event_spell_gandling_shadow_portal");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_gandling_shadow_portal;
     pNewScript->RegisterSelf();
 }

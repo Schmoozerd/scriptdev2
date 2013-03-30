@@ -149,8 +149,7 @@ void AddSC_boss_nethermancer_sepethrea()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_nethermancer_sepethrea";
+    pNewScript = new Script("boss_nethermancer_sepethrea");
     pNewScript->GetAI = &GetAI_boss_nethermancer_sepethrea;
     pNewScript->RegisterSelf();
 }

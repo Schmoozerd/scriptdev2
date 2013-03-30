@@ -230,13 +230,11 @@ void AddSC_boss_sulfuron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sulfuron";
+    pNewScript = new Script("boss_sulfuron");
     pNewScript->GetAI = &GetAI_boss_sulfuron;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_flamewaker_priest";
+    pNewScript = new Script("mob_flamewaker_priest");
     pNewScript->GetAI = &GetAI_mob_flamewaker_priest;
     pNewScript->RegisterSelf();
 }

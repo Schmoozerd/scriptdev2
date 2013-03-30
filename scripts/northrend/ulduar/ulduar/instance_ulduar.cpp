@@ -637,8 +637,7 @@ void AddSC_instance_ulduar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_ulduar";
+    pNewScript = new Script("instance_ulduar");
     pNewScript->GetInstanceData = &GetInstanceData_instance_ulduar;
     pNewScript->RegisterSelf();
 }

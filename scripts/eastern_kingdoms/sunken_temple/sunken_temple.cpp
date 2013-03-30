@@ -246,33 +246,27 @@ void AddSC_sunken_temple()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_shade_of_eranikus";
+    pNewScript = new Script("at_shade_of_eranikus");
     pNewScript->pAreaTrigger = &AreaTrigger_at_shade_of_eranikus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_malfurion_stormrage";
+    pNewScript = new Script("npc_malfurion_stormrage");
     pNewScript->GetAI = &GetAI_npc_malfurion;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_antalarion_statue_activation";
+    pNewScript = new Script("event_antalarion_statue_activation");
     pNewScript->pProcessEventId = &ProcessEventId_event_antalarion_statue_activation;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_avatar_of_hakkar";
+    pNewScript = new Script("event_avatar_of_hakkar");
     pNewScript->pProcessEventId = &ProcessEventId_event_avatar_of_hakkar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_eternal_flame";
+    pNewScript = new Script("go_eternal_flame");
     pNewScript->pGOUse = &GOUse_go_eternal_flame;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shade_of_hakkar";
+    pNewScript = new Script("npc_shade_of_hakkar");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_summon_hakkar;
     pNewScript->RegisterSelf();
 }

@@ -380,13 +380,11 @@ void AddSC_boss_anubarak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_anubarak";
+    pNewScript = new Script("boss_anubarak");
     pNewScript->GetAI = &GetAI_boss_anubarak;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_impale_target";
+    pNewScript = new Script("npc_impale_target");
     pNewScript->GetAI = &GetAI_npc_impale_target;
     pNewScript->RegisterSelf();
 }

@@ -264,8 +264,7 @@ void AddSC_boss_galdarah()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_galdarah";
+    pNewScript = new Script("boss_galdarah");
     pNewScript->GetAI = &GetAI_boss_galdarah;
     pNewScript->RegisterSelf();
 }

@@ -1015,33 +1015,28 @@ void AddSC_stormwind_city()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_bartleby";
+    pNewScript = new Script("npc_bartleby");
     pNewScript->GetAI = &GetAI_npc_bartleby;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_bartleby;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dashel_stonefist";
+    pNewScript = new Script("npc_dashel_stonefist");
     pNewScript->GetAI = &GetAI_npc_dashel_stonefist;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_dashel_stonefist;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lady_katrana_prestor";
+    pNewScript = new Script("npc_lady_katrana_prestor");
     pNewScript->pGossipHello = &GossipHello_npc_lady_katrana_prestor;
     pNewScript->pGossipSelect = &GossipSelect_npc_lady_katrana_prestor;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_squire_rowe";
+    pNewScript = new Script("npc_squire_rowe");
     pNewScript->GetAI = &GetAI_npc_squire_rowe;
     pNewScript->pGossipHello = &GossipHello_npc_squire_rowe;
     pNewScript->pGossipSelect = &GossipSelect_npc_squire_rowe;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_reginald_windsor";
+    pNewScript = new Script("npc_reginald_windsor");
     pNewScript->GetAI = &GetAI_npc_reginald_windsor;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_reginald_windsor;
     pNewScript->pGossipHello = &GossipHello_npc_reginald_windsor;

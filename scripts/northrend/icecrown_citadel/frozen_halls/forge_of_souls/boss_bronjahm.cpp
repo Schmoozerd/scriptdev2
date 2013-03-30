@@ -263,13 +263,11 @@ void AddSC_boss_bronjahm()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_bronjahm";
+    pNewScript = new Script("boss_bronjahm");
     pNewScript->GetAI = &GetAI_boss_bronjahm;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_corrupted_soul_fragment";
+    pNewScript = new Script("npc_corrupted_soul_fragment");
     pNewScript->GetAI = &GetAI_npc_corrupted_soul_fragment;
     pNewScript->RegisterSelf();
 }

@@ -1268,39 +1268,32 @@ void AddSC_boss_kaelthas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kaelthas";
+    pNewScript = new Script("boss_kaelthas");
     pNewScript->GetAI = &GetAI_boss_kaelthas;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_kael_phase_2;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_thaladred_the_darkener";
+    pNewScript = new Script("boss_thaladred_the_darkener");
     pNewScript->GetAI = &GetAI_boss_thaladred_the_darkener;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lord_sanguinar";
+    pNewScript = new Script("boss_lord_sanguinar");
     pNewScript->GetAI = &GetAI_boss_lord_sanguinar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_grand_astromancer_capernian";
+    pNewScript = new Script("boss_grand_astromancer_capernian");
     pNewScript->GetAI = &GetAI_boss_grand_astromancer_capernian;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_master_engineer_telonicus";
+    pNewScript = new Script("boss_master_engineer_telonicus");
     pNewScript->GetAI = &GetAI_boss_master_engineer_telonicus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_phoenix_tk";
+    pNewScript = new Script("mob_phoenix_tk");
     pNewScript->GetAI = &GetAI_mob_phoenix_tk;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_phoenix_egg_tk";
+    pNewScript = new Script("mob_phoenix_egg_tk");
     pNewScript->GetAI = &GetAI_mob_phoenix_egg_tk;
     pNewScript->RegisterSelf();
 }

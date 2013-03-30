@@ -775,33 +775,27 @@ void AddSC_boss_illidari_council()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_illidari_council";
+    pNewScript = new Script("mob_illidari_council");
     pNewScript->GetAI = &GetAI_mob_illidari_council;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_blood_elf_council_voice_trigger";
+    pNewScript = new Script("mob_blood_elf_council_voice_trigger");
     pNewScript->GetAI = &GetAI_mob_blood_elf_council_voice_trigger;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gathios_the_shatterer";
+    pNewScript = new Script("boss_gathios_the_shatterer");
     pNewScript->GetAI = &GetAI_boss_gathios_the_shatterer;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lady_malande";
+    pNewScript = new Script("boss_lady_malande");
     pNewScript->GetAI = &GetAI_boss_lady_malande;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_veras_darkshadow";
+    pNewScript = new Script("boss_veras_darkshadow");
     pNewScript->GetAI = &GetAI_boss_veras_darkshadow;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_high_nethermancer_zerevor";
+    pNewScript = new Script("boss_high_nethermancer_zerevor");
     pNewScript->GetAI = &GetAI_boss_high_nethermancer_zerevor;
     pNewScript->RegisterSelf();
 }

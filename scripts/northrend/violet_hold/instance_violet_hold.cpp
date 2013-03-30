@@ -754,8 +754,7 @@ void AddSC_instance_violet_hold()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_violet_hold";
+    pNewScript = new Script("instance_violet_hold");
     pNewScript->GetInstanceData = GetInstanceData_instance_violet_hold;
     pNewScript->RegisterSelf();
 }

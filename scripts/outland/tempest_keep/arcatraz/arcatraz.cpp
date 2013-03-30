@@ -351,13 +351,11 @@ void AddSC_arcatraz()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_millhouse_manastorm";
+    pNewScript = new Script("npc_millhouse_manastorm");
     pNewScript->GetAI = &GetAI_npc_millhouse_manastorm;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_warden_mellichar";
+    pNewScript = new Script("npc_warden_mellichar");
     pNewScript->GetAI = &GetAI_npc_warden_mellichar;
     pNewScript->RegisterSelf();
 }

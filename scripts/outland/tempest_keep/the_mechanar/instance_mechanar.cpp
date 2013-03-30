@@ -230,8 +230,7 @@ void AddSC_instance_mechanar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_mechanar";
+    pNewScript = new Script("instance_mechanar");
     pNewScript->GetInstanceData = &GetInstanceData_instance_mechanar;
     pNewScript->RegisterSelf();
 }

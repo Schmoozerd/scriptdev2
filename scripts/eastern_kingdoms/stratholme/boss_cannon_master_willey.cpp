@@ -112,8 +112,7 @@ void AddSC_boss_cannon_master_willey()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_cannon_master_willey";
+    pNewScript = new Script("boss_cannon_master_willey");
     pNewScript->GetAI = &GetAI_boss_cannon_master_willey;
     pNewScript->RegisterSelf();
 }

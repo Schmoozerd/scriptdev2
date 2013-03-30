@@ -196,13 +196,11 @@ void AddSC_instance_steam_vault()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_main_chambers_access_panel";
+    pNewScript = new Script("go_main_chambers_access_panel");
     pNewScript->pGOUse = &GOUse_go_main_chambers_access_panel;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_steam_vault";
+    pNewScript = new Script("instance_steam_vault");
     pNewScript->GetInstanceData = &GetInstanceData_instance_steam_vault;
     pNewScript->RegisterSelf();
 }

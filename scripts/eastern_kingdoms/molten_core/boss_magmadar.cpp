@@ -127,8 +127,7 @@ void AddSC_boss_magmadar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_magmadar";
+    pNewScript = new Script("boss_magmadar");
     pNewScript->GetAI = &GetAI_boss_magmadar;
     pNewScript->RegisterSelf();
 }

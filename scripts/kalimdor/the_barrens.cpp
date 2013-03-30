@@ -625,35 +625,29 @@ void AddSC_the_barrens()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_beaten_corpse";
+    pNewScript = new Script("npc_beaten_corpse");
     pNewScript->pGossipHello = &GossipHello_npc_beaten_corpse;
     pNewScript->pGossipSelect = &GossipSelect_npc_beaten_corpse;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_gilthares";
+    pNewScript = new Script("npc_gilthares");
     pNewScript->GetAI = &GetAI_npc_gilthares;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_gilthares;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_taskmaster_fizzule";
+    pNewScript = new Script("npc_taskmaster_fizzule");
     pNewScript->GetAI = &GetAI_npc_taskmaster_fizzule;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_twiggy_flathead";
+    pNewScript = new Script("npc_twiggy_flathead");
     pNewScript->GetAI = &GetAI_npc_twiggy_flathead;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_twiggy_flathead";
+    pNewScript = new Script("at_twiggy_flathead");
     pNewScript->pAreaTrigger = &AreaTrigger_at_twiggy_flathead;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_wizzlecranks_shredder";
+    pNewScript = new Script("npc_wizzlecranks_shredder");
     pNewScript->GetAI = &GetAI_npc_wizzlecranks_shredder;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_wizzlecranks_shredder;
     pNewScript->RegisterSelf();

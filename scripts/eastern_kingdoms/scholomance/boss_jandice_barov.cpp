@@ -102,8 +102,7 @@ void AddSC_boss_jandicebarov()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_jandice_barov";
+    pNewScript = new Script("boss_jandice_barov");
     pNewScript->GetAI = &GetAI_boss_jandicebarov;
     pNewScript->RegisterSelf();
 }

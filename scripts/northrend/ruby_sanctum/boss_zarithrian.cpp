@@ -156,8 +156,7 @@ void AddSC_boss_zarithrian()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_zarithrian";
+    pNewScript = new Script("boss_zarithrian");
     pNewScript->GetAI = &GetAI_boss_zarithrian;
     pNewScript->RegisterSelf();
 }

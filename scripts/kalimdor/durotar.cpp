@@ -147,8 +147,7 @@ void AddSC_durotar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lazy_peon";
+    pNewScript = new Script("npc_lazy_peon");
     pNewScript->GetAI = &GetAI_npc_lazy_peon;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_lazy_peon_awake;
     pNewScript->RegisterSelf();

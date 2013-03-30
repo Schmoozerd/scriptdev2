@@ -119,8 +119,7 @@ void AddSC_boss_hazzarah()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_hazzarah";
+    pNewScript = new Script("boss_hazzarah");
     pNewScript->GetAI = &GetAI_boss_hazzarah;
     pNewScript->RegisterSelf();
 }

@@ -672,13 +672,11 @@ void AddSC_silithus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_anachronos_the_ancient";
+    pNewScript = new Script("npc_anachronos_the_ancient");
     pNewScript->GetAI = &GetAI_npc_anachronos_the_ancient;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_crystalline_tear";
+    pNewScript = new Script("go_crystalline_tear");
     pNewScript->pQuestAcceptGO = &QuestAcceptGO_crystalline_tear;
     pNewScript->RegisterSelf();
 }

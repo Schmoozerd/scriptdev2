@@ -426,8 +426,7 @@ void AddSC_instance_ahnkahet()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_ahnkahet";
+    pNewScript = new Script("instance_ahnkahet");
     pNewScript->GetInstanceData = &GetInstanceData_instance_ahnkahet;
     pNewScript->RegisterSelf();
 }

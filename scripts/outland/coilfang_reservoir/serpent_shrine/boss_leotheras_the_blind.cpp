@@ -332,8 +332,7 @@ void AddSC_boss_leotheras_the_blind()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_leotheras_the_blind";
+    pNewScript = new Script("boss_leotheras_the_blind");
     pNewScript->GetAI = &GetAI_boss_leotheras_the_blind;
     pNewScript->RegisterSelf();
 }

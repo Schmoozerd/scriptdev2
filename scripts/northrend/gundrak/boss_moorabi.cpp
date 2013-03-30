@@ -184,8 +184,7 @@ void AddSC_boss_moorabi()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_moorabi";
+    pNewScript = new Script("boss_moorabi");
     pNewScript->GetAI = &GetAI_boss_moorabi;
     pNewScript->RegisterSelf();
 }

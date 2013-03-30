@@ -1282,52 +1282,43 @@ void AddSC_bosses_opera()
     Script* pNewScript;
 
     // Oz
-    pNewScript = new Script;
-    pNewScript->Name = "boss_dorothee";
+    pNewScript = new Script("boss_dorothee");
     pNewScript->GetAI = &GetAI_boss_dorothee;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_strawman";
+    pNewScript = new Script("boss_strawman");
     pNewScript->GetAI = &GetAI_boss_strawman;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_tinhead";
+    pNewScript = new Script("boss_tinhead");
     pNewScript->GetAI = &GetAI_boss_tinhead;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_roar";
+    pNewScript = new Script("boss_roar");
     pNewScript->GetAI = &GetAI_boss_roar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_crone";
+    pNewScript = new Script("boss_crone");
     pNewScript->GetAI = &GetAI_boss_crone;
     pNewScript->RegisterSelf();
 
     // Hood
-    pNewScript = new Script;
-    pNewScript->Name = "npc_grandmother";
+    pNewScript = new Script("npc_grandmother");
     pNewScript->pGossipHello = &GossipHello_npc_grandmother;
     pNewScript->pGossipSelect = &GossipSelect_npc_grandmother;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_bigbadwolf";
+    pNewScript = new Script("boss_bigbadwolf");
     pNewScript->GetAI = &GetAI_boss_bigbadwolf;
     pNewScript->RegisterSelf();
 
     // Romeo And Juliet
-    pNewScript = new Script;
-    pNewScript->Name = "boss_julianne";
+    pNewScript = new Script("boss_julianne");
     pNewScript->GetAI = &GetAI_boss_julianne;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_drink_poison;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_romulo";
+    pNewScript = new Script("boss_romulo");
     pNewScript->GetAI = &GetAI_boss_romulo;
     pNewScript->RegisterSelf();
 }

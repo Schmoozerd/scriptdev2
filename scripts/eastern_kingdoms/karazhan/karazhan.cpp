@@ -511,31 +511,26 @@ void AddSC_karazhan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_barnes";
+    pNewScript = new Script("npc_barnes");
     pNewScript->GetAI = &GetAI_npc_barnesAI;
     pNewScript->pGossipHello = &GossipHello_npc_barnes;
     pNewScript->pGossipSelect = &GossipSelect_npc_barnes;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_berthold";
+    pNewScript = new Script("npc_berthold");
     pNewScript->pGossipHello = &GossipHello_npc_berthold;
     pNewScript->pGossipSelect = &GossipSelect_npc_berthold;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_image_of_medivh";
+    pNewScript = new Script("npc_image_of_medivh");
     pNewScript->GetAI = &GetAI_npc_image_of_medivhAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_image_arcanagos";
+    pNewScript = new Script("npc_image_arcanagos");
     pNewScript->GetAI = &GetAI_npc_image_arcanagosAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_medivh_journal";
+    pNewScript = new Script("event_spell_medivh_journal");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_medivh_journal;
     pNewScript->RegisterSelf();
 }

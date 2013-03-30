@@ -396,21 +396,18 @@ void AddSC_desolace()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_aged_dying_ancient_kodo";
+    pNewScript = new Script("npc_aged_dying_ancient_kodo");
     pNewScript->GetAI = &GetAI_npc_aged_dying_ancient_kodo;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_aged_dying_ancient_kodo;
     pNewScript->pGossipHello = &GossipHello_npc_aged_dying_ancient_kodo;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dalinda_malem";
+    pNewScript = new Script("npc_dalinda_malem");
     pNewScript->GetAI = &GetAI_npc_dalinda_malem;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_dalinda_malem;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_melizza_brimbuzzle";
+    pNewScript = new Script("npc_melizza_brimbuzzle");
     pNewScript->GetAI = &GetAI_npc_melizza_brimbuzzle;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_melizza_brimbuzzle;
     pNewScript->RegisterSelf();

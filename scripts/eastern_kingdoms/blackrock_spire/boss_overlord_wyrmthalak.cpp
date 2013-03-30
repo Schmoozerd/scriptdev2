@@ -135,8 +135,7 @@ void AddSC_boss_overlordwyrmthalak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_overlord_wyrmthalak";
+    pNewScript = new Script("boss_overlord_wyrmthalak");
     pNewScript->GetAI = &GetAI_boss_overlordwyrmthalak;
     pNewScript->RegisterSelf();
 }

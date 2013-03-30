@@ -316,13 +316,11 @@ void AddSC_boss_ayamiss()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ayamiss";
+    pNewScript = new Script("boss_ayamiss");
     pNewScript->GetAI = &GetAI_boss_ayamiss;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_hive_zara_larva";
+    pNewScript = new Script("npc_hive_zara_larva");
     pNewScript->GetAI = &GetAI_npc_hive_zara_larva;
     pNewScript->RegisterSelf();
 }

@@ -265,13 +265,11 @@ void AddSC_boss_ormorok()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ormorok";
+    pNewScript = new Script("boss_ormorok");
     pNewScript->GetAI = &GetAI_boss_ormorok;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_crystal_spike_trigger";
+    pNewScript = new Script("npc_crystal_spike_trigger");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_crystal_spike_trigger;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_crystal_spike_visual;
     pNewScript->RegisterSelf();

@@ -539,32 +539,27 @@ void AddSC_eversong_woods()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kelerun_bloodmourn";
+    pNewScript = new Script("npc_kelerun_bloodmourn");
     pNewScript->GetAI = &GetAI_npc_kelerun_bloodmourn;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_kelerun_bloodmourn;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_harbinger_second_trial";
+    pNewScript = new Script("go_harbinger_second_trial");
     pNewScript->pGOUse = &GOUse_go_harbinger_second_trial;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_prospector_anvilward";
+    pNewScript = new Script("npc_prospector_anvilward");
     pNewScript->GetAI = &GetAI_npc_prospector_anvilward;
     pNewScript->pGossipHello =  &GossipHello_npc_prospector_anvilward;
     pNewScript->pGossipSelect = &GossipSelect_npc_prospector_anvilward;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_apprentice_mirveda";
+    pNewScript = new Script("npc_apprentice_mirveda");
     pNewScript->GetAI = &GetAI_npc_apprentice_mirvedaAI;
     pNewScript->pQuestAcceptNPC = &QuestAccept_unexpected_results;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_infused_crystal";
+    pNewScript = new Script("npc_infused_crystal");
     pNewScript->GetAI = &GetAI_npc_infused_crystalAI;
     pNewScript->RegisterSelf();
 }

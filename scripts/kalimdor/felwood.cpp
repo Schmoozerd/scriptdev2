@@ -405,26 +405,22 @@ void AddSC_felwood()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kitten";
+    pNewScript = new Script("npc_kitten");
     pNewScript->GetAI = &GetAI_npc_kitten;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_kitten;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_corrupt_saber";
+    pNewScript = new Script("npc_corrupt_saber");
     pNewScript->pGossipHello = &GossipHello_npc_corrupt_saber;
     pNewScript->pGossipSelect = &GossipSelect_npc_corrupt_saber;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_niby_the_almighty";
+    pNewScript = new Script("npc_niby_the_almighty");
     pNewScript->GetAI = &GetAI_npc_niby_the_almighty;
     pNewScript->pQuestRewardedNPC = &QuestRewarded_npc_niby_the_almighty;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kroshius";
+    pNewScript = new Script("npc_kroshius");
     pNewScript->GetAI = &GetAI_npc_kroshius;
     pNewScript->pProcessEventId = &ProcessEventId_npc_kroshius;
     pNewScript->RegisterSelf();

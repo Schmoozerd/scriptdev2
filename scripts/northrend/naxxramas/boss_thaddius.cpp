@@ -748,24 +748,20 @@ void AddSC_boss_thaddius()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_thaddius";
+    pNewScript = new Script("boss_thaddius");
     pNewScript->GetAI = &GetAI_boss_thaddius;
     pNewScript->pEffectDummyNPC = &EffectDummyNPC_spell_thaddius_encounter;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_stalagg";
+    pNewScript = new Script("boss_stalagg");
     pNewScript->GetAI = &GetAI_boss_stalagg;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_feugen";
+    pNewScript = new Script("boss_feugen");
     pNewScript->GetAI = &GetAI_boss_feugen;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_tesla_coil";
+    pNewScript = new Script("npc_tesla_coil");
     pNewScript->GetAI = &GetAI_npc_tesla_coil;
     pNewScript->pEffectDummyNPC = &EffectDummyNPC_spell_thaddius_encounter;
     pNewScript->RegisterSelf();

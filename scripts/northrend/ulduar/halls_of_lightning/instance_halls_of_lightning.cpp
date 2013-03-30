@@ -170,8 +170,7 @@ void AddSC_instance_halls_of_lightning()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_halls_of_lightning";
+    pNewScript = new Script("instance_halls_of_lightning");
     pNewScript->GetInstanceData = &GetInstanceData_instance_halls_of_lightning;
     pNewScript->RegisterSelf();
 }

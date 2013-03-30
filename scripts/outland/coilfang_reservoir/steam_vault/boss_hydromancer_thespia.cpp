@@ -159,8 +159,7 @@ void AddSC_boss_hydromancer_thespia()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_hydromancer_thespia";
+    pNewScript = new Script("boss_hydromancer_thespia");
     pNewScript->GetAI = &GetAI_boss_thespiaAI;
     pNewScript->RegisterSelf();
 }

@@ -205,8 +205,7 @@ void AddSC_boss_pyroguard_emberseer()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_pyroguard_emberseer";
+    pNewScript = new Script("boss_pyroguard_emberseer");
     pNewScript->GetAI = &GetAI_boss_pyroguard_emberseer;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_pyroguard_emberseer;
     pNewScript->RegisterSelf();

@@ -83,8 +83,7 @@ void AddSC_boss_headless_horseman()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_headless_horseman";
+    pNewScript = new Script("boss_headless_horseman");
     pNewScript->GetAI = GetAI_boss_headless_horseman;
     pNewScript->RegisterSelf();
 }

@@ -228,8 +228,7 @@ void AddSC_boss_anubrekhan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_anubrekhan";
+    pNewScript = new Script("boss_anubrekhan");
     pNewScript->GetAI = &GetAI_boss_anubrekhan;
     pNewScript->RegisterSelf();
 }

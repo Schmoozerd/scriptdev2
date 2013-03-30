@@ -215,8 +215,7 @@ void AddSC_boss_saviana()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_saviana";
+    pNewScript = new Script("boss_saviana");
     pNewScript->GetAI = &GetAI_boss_saviana;
     pNewScript->RegisterSelf();
 }

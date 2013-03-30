@@ -310,13 +310,11 @@ void AddSC_boss_eregos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_eregos";
+    pNewScript = new Script("boss_eregos");
     pNewScript->GetAI = &GetAI_boss_eregos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_planar_anomaly";
+    pNewScript = new Script("npc_planar_anomaly");
     pNewScript->GetAI = &GetAI_npc_planar_anomaly;
     pNewScript->RegisterSelf();
 }

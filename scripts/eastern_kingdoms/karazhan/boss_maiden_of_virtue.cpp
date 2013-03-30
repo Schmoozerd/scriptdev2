@@ -153,8 +153,7 @@ void AddSC_boss_maiden_of_virtue()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_maiden_of_virtue";
+    pNewScript = new Script("boss_maiden_of_virtue");
     pNewScript->GetAI = &GetAI_boss_maiden_of_virtue;
     pNewScript->RegisterSelf();
 }

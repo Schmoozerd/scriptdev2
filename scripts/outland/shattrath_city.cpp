@@ -625,20 +625,17 @@ void AddSC_shattrath_city()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dirty_larry";
+    pNewScript = new Script("npc_dirty_larry");
     pNewScript->GetAI = &GetAI_npc_dirty_larry;
     pNewScript->pGossipHello = &GossipHello_npc_dirty_larry;
     pNewScript->pGossipSelect = &GossipSelect_npc_dirty_larry;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_khadgars_servant";
+    pNewScript = new Script("npc_khadgars_servant");
     pNewScript->GetAI = &GetAI_npc_khadgars_servant;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_salsalabim";
+    pNewScript = new Script("npc_salsalabim");
     pNewScript->GetAI = &GetAI_npc_salsalabim;
     pNewScript->pGossipHello = &GossipHello_npc_salsalabim;
     pNewScript->RegisterSelf();

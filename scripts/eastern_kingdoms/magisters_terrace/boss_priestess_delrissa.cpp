@@ -1273,48 +1273,39 @@ void AddSC_boss_priestess_delrissa()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_priestess_delrissa";
+    pNewScript = new Script("boss_priestess_delrissa");
     pNewScript->GetAI = &GetAI_boss_priestess_delrissa;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kagani_nightstrike";
+    pNewScript = new Script("npc_kagani_nightstrike");
     pNewScript->GetAI = &GetAI_npc_kagani_nightstrike;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ellris_duskhallow";
+    pNewScript = new Script("npc_ellris_duskhallow");
     pNewScript->GetAI = &GetAI_npc_ellris_duskhallow;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_eramas_brightblaze";
+    pNewScript = new Script("npc_eramas_brightblaze");
     pNewScript->GetAI = &GetAI_npc_eramas_brightblaze;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_yazzai";
+    pNewScript = new Script("npc_yazzai");
     pNewScript->GetAI = &GetAI_npc_yazzai;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_warlord_salaris";
+    pNewScript = new Script("npc_warlord_salaris");
     pNewScript->GetAI = &GetAI_npc_warlord_salaris;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_garaxxas";
+    pNewScript = new Script("npc_garaxxas");
     pNewScript->GetAI = &GetAI_npc_garaxxas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_apoko";
+    pNewScript = new Script("npc_apoko");
     pNewScript->GetAI = &GetAI_npc_apoko;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_zelfan";
+    pNewScript = new Script("npc_zelfan");
     pNewScript->GetAI = &GetAI_npc_zelfan;
     pNewScript->RegisterSelf();
 }

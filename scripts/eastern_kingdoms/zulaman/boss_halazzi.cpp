@@ -378,13 +378,11 @@ void AddSC_boss_halazzi()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_halazzi";
+    pNewScript = new Script("boss_halazzi");
     pNewScript->GetAI = &GetAI_boss_halazzi;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_spirit_lynx";
+    pNewScript = new Script("boss_spirit_lynx");
     pNewScript->GetAI = &GetAI_boss_spirit_lynx;
     pNewScript->RegisterSelf();
 }

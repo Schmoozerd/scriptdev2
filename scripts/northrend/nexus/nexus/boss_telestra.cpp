@@ -280,8 +280,7 @@ void AddSC_boss_telestra()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_telestra";
+    pNewScript = new Script("boss_telestra");
     pNewScript->GetAI = &GetAI_boss_telestra;
     pNewScript->RegisterSelf();
 }

@@ -116,8 +116,7 @@ void AddSC_boss_baroness_anastari()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_baroness_anastari";
+    pNewScript = new Script("boss_baroness_anastari");
     pNewScript->GetAI = &GetAI_boss_baroness_anastari;
     pNewScript->RegisterSelf();
 }

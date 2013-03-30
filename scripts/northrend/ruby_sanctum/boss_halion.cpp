@@ -531,13 +531,11 @@ void AddSC_boss_halion()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_halion_real";
+    pNewScript = new Script("boss_halion_real");
     pNewScript->GetAI = &GetAI_boss_halion_real;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_halion_twilight";
+    pNewScript = new Script("boss_halion_twilight");
     pNewScript->GetAI = &GetAI_boss_halion_twilight;
     pNewScript->RegisterSelf();
 }

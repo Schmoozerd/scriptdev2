@@ -223,22 +223,19 @@ void AddSC_hyjal()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_jaina_proudmoore";
+    pNewScript = new Script("npc_jaina_proudmoore");
     pNewScript->GetAI = &GetAI_npc_jaina_proudmoore;
     pNewScript->pGossipHello = &GossipHello_npc_jaina_proudmoore;
     pNewScript->pGossipSelect = &GossipSelect_npc_jaina_proudmoore;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_thrall";
+    pNewScript = new Script("npc_thrall");
     pNewScript->GetAI = &GetAI_npc_thrall;
     pNewScript->pGossipHello = &GossipHello_npc_thrall;
     pNewScript->pGossipSelect = &GossipSelect_npc_thrall;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_tyrande_whisperwind";
+    pNewScript = new Script("npc_tyrande_whisperwind");
     pNewScript->pGossipHello = &GossipHello_npc_tyrande_whisperwind;
     pNewScript->pGossipSelect = &GossipSelect_npc_tyrande_whisperwind;
     pNewScript->RegisterSelf();

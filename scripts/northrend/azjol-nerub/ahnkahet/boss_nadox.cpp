@@ -243,13 +243,11 @@ void AddSC_boss_nadox()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_nadox";
+    pNewScript = new Script("boss_nadox");
     pNewScript->GetAI = &GetAI_boss_nadox;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_ahnkahar_egg";
+    pNewScript = new Script("mob_ahnkahar_egg");
     pNewScript->GetAI = &GetAI_mob_ahnkahar_egg;
     pNewScript->RegisterSelf();
 }

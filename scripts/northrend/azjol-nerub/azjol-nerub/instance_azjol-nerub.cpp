@@ -361,8 +361,7 @@ void AddSC_instance_azjol_nerub()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_azjol-nerub";
+    pNewScript = new Script("instance_azjol-nerub");
     pNewScript->GetInstanceData = &GetInstanceData_instance_azjol_nerub;
     pNewScript->RegisterSelf();
 }

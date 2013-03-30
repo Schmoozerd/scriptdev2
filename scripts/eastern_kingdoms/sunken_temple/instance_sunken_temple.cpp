@@ -433,8 +433,7 @@ void AddSC_instance_sunken_temple()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_sunken_temple";
+    pNewScript = new Script("instance_sunken_temple");
     pNewScript->GetInstanceData = &GetInstanceData_instance_sunken_temple;
     pNewScript->RegisterSelf();
 }

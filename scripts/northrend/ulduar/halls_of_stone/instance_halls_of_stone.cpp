@@ -419,8 +419,7 @@ void AddSC_instance_halls_of_stone()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_halls_of_stone";
+    pNewScript = new Script("instance_halls_of_stone");
     pNewScript->GetInstanceData = &GetInstanceData_instance_halls_of_stone;
     pNewScript->RegisterSelf();
 }

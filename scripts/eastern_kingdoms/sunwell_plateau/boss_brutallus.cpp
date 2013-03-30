@@ -496,18 +496,15 @@ void AddSC_boss_brutallus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_brutallus";
+    pNewScript = new Script("boss_brutallus");
     pNewScript->GetAI = &GetAI_boss_brutallus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "spell_dummy_npc_brutallus_cloud";
+    pNewScript = new Script("spell_dummy_npc_brutallus_cloud");
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_npc_brutallus_cloud;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_madrigosa";
+    pNewScript = new Script("at_madrigosa");
     pNewScript->pAreaTrigger = &AreaTrigger_at_madrigosa;
     pNewScript->RegisterSelf();
 }

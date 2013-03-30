@@ -352,13 +352,11 @@ void AddSC_boss_prince_malchezaar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_malchezaar";
+    pNewScript = new Script("boss_malchezaar");
     pNewScript->GetAI = &GetAI_boss_malchezaar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_infernal_target";
+    pNewScript = new Script("npc_infernal_target");
     pNewScript->GetAI = &GetAI_npc_infernal_target;
     pNewScript->RegisterSelf();
 }

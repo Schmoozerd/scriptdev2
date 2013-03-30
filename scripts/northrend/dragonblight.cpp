@@ -168,8 +168,7 @@ void AddSC_dragonblight()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_destructive_ward";
+    pNewScript = new Script("npc_destructive_ward");
     pNewScript->GetAI = &GetAI_npc_destructive_ward;
     pNewScript->RegisterSelf();
 }

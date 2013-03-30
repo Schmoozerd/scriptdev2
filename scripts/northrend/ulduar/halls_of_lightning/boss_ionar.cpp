@@ -375,14 +375,12 @@ void AddSC_boss_ionar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ionar";
+    pNewScript = new Script("boss_ionar");
     pNewScript->GetAI = &GetAI_boss_ionar;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_boss_ionar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_spark_of_ionar";
+    pNewScript = new Script("mob_spark_of_ionar");
     pNewScript->GetAI = &GetAI_mob_spark_of_ionar;
     pNewScript->RegisterSelf();
 }

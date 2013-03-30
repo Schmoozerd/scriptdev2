@@ -112,8 +112,7 @@ void AddSC_boss_noxxion()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_noxxion";
+    pNewScript = new Script("boss_noxxion");
     pNewScript->GetAI = &GetAI_boss_noxxion;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_noxxion_spawns;
     pNewScript->RegisterSelf();

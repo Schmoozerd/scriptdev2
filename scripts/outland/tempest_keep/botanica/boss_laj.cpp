@@ -220,8 +220,7 @@ void AddSC_boss_laj()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_laj";
+    pNewScript = new Script("boss_laj");
     pNewScript->GetAI = &GetAI_boss_laj;
     pNewScript->RegisterSelf();
 }

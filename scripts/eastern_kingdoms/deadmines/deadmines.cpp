@@ -42,8 +42,7 @@ void AddSC_deadmines()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_defias_cannon";
+    pNewScript = new Script("go_defias_cannon");
     pNewScript->pGOUse = &GOUse_go_defias_cannon;
     pNewScript->RegisterSelf();
 }

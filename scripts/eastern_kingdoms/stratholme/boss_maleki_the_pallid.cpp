@@ -114,8 +114,7 @@ void AddSC_boss_maleki_the_pallid()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_maleki_the_pallid";
+    pNewScript = new Script("boss_maleki_the_pallid");
     pNewScript->GetAI = &GetAI_boss_maleki_the_pallid;
     pNewScript->RegisterSelf();
 }

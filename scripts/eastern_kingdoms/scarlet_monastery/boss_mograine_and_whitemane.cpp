@@ -366,13 +366,11 @@ void AddSC_boss_mograine_and_whitemane()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_scarlet_commander_mograine";
+    pNewScript = new Script("boss_scarlet_commander_mograine");
     pNewScript->GetAI = &GetAI_boss_scarlet_commander_mograine;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_high_inquisitor_whitemane";
+    pNewScript = new Script("boss_high_inquisitor_whitemane");
     pNewScript->GetAI = &GetAI_boss_high_inquisitor_whitemane;
     pNewScript->RegisterSelf();
 }

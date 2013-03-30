@@ -148,8 +148,7 @@ void AddSC_oculus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_oculus_drake";
+    pNewScript = new Script("npc_oculus_drake");
     pNewScript->GetAI = &GetAI_npc_oculus_drake;
     pNewScript->RegisterSelf();
 }

@@ -250,14 +250,12 @@ void AddSC_boss_warlord_kalithresh()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_warlord_kalithresh";
+    pNewScript = new Script("boss_warlord_kalithresh");
     pNewScript->GetAI = &GetAI_boss_warlord_kalithresh;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_warlord_rage;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_naga_distiller";
+    pNewScript = new Script("mob_naga_distiller");
     pNewScript->GetAI = &GetAI_mob_naga_distiller;
     pNewScript->RegisterSelf();
 }

@@ -349,19 +349,16 @@ void AddSC_nagrand()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_lump";
+    pNewScript = new Script("mob_lump");
     pNewScript->GetAI = &GetAI_mob_lump;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_maghar_captive";
+    pNewScript = new Script("npc_maghar_captive");
     pNewScript->GetAI = &GetAI_npc_maghar_captive;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_maghar_captive;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_creditmarker_visit_with_ancestors";
+    pNewScript = new Script("npc_creditmarker_visit_with_ancestors");
     pNewScript->GetAI = &GetAI_npc_creditmarker_visit_with_ancestors;
     pNewScript->RegisterSelf();
 }

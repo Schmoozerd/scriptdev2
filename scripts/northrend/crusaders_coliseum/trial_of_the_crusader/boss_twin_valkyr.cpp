@@ -100,13 +100,11 @@ void AddSC_twin_valkyr()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_fjola";
+    pNewScript = new Script("boss_fjola");
     pNewScript->GetAI = &GetAI_boss_fjola;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_eydis";
+    pNewScript = new Script("boss_eydis");
     pNewScript->GetAI = &GetAI_boss_fjola;
     pNewScript->RegisterSelf();
 }

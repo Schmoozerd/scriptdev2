@@ -311,13 +311,11 @@ void AddSC_boss_general_vezax()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_general_vezax";
+    pNewScript = new Script("boss_general_vezax");
     pNewScript->GetAI = &GetAI_boss_general_vezax;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_saronite_barrier";
+    pNewScript = new Script("event_spell_saronite_barrier");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_saronite_barrier;
     pNewScript->RegisterSelf();
 }

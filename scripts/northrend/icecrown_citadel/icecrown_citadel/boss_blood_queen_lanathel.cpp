@@ -330,8 +330,7 @@ void AddSC_boss_blood_queen_lanathel()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_blood_queen_lanathel";
+    pNewScript = new Script("boss_blood_queen_lanathel");
     pNewScript->GetAI = &GetAI_boss_blood_queen_lanathel;
     pNewScript->RegisterSelf();
 }

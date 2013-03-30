@@ -771,20 +771,17 @@ void AddSC_halls_of_stone()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_brann_hos";
+    pNewScript = new Script("npc_brann_hos");
     pNewScript->GetAI = &GetAI_npc_brann_hos;
     pNewScript->pGossipHello = &GossipHello_npc_brann_hos;
     pNewScript->pGossipSelect = &GossipSelect_npc_brann_hos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dark_matter";
+    pNewScript = new Script("npc_dark_matter");
     pNewScript->GetAI = &GetAI_npc_dark_matter;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_searing_gaze";
+    pNewScript = new Script("npc_searing_gaze");
     pNewScript->GetAI = &GetAI_npc_searing_gaze;
     pNewScript->RegisterSelf();
 }

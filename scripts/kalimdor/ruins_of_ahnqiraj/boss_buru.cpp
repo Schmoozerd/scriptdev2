@@ -234,13 +234,11 @@ void AddSC_boss_buru()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_buru";
+    pNewScript = new Script("boss_buru");
     pNewScript->GetAI = &GetAI_boss_buru;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_buru_egg";
+    pNewScript = new Script("npc_buru_egg");
     pNewScript->GetAI = &GetAI_npc_buru_egg;
     pNewScript->RegisterSelf();
 }

@@ -413,13 +413,11 @@ void AddSC_boss_warbringer_omrogg()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_warbringer_omrogg";
+    pNewScript = new Script("boss_warbringer_omrogg");
     pNewScript->GetAI = &GetAI_boss_warbringer_omrogg;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_omrogg_heads";
+    pNewScript = new Script("mob_omrogg_heads");
     pNewScript->GetAI = &GetAI_mob_omrogg_heads;
     pNewScript->RegisterSelf();
 }

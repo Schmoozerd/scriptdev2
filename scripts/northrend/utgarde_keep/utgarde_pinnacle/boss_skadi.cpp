@@ -500,18 +500,15 @@ void AddSC_boss_skadi()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_skadi";
+    pNewScript = new Script("boss_skadi");
     pNewScript->GetAI = &GetAI_boss_skadi;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_grauf";
+    pNewScript = new Script("npc_grauf");
     pNewScript->GetAI = &GetAI_npc_grauf;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_skadi";
+    pNewScript = new Script("at_skadi");
     pNewScript->pAreaTrigger = &AreaTrigger_at_skadi;
     pNewScript->RegisterSelf();
 }

@@ -235,8 +235,7 @@ void AddSC_instance_deadmines()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_deadmines";
+    pNewScript = new Script("instance_deadmines");
     pNewScript->GetInstanceData = &GetInstanceData_instance_deadmines;
     pNewScript->RegisterSelf();
 }

@@ -1030,61 +1030,50 @@ void AddSC_terokkar_forest()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_unkor_the_ruthless";
+    pNewScript = new Script("mob_unkor_the_ruthless");
     pNewScript->GetAI = &GetAI_mob_unkor_the_ruthless;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_netherweb_victim";
+    pNewScript = new Script("mob_netherweb_victim");
     pNewScript->GetAI = &GetAI_mob_netherweb_victim;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_akuno";
+    pNewScript = new Script("npc_akuno");
     pNewScript->GetAI = &GetAI_npc_akuno;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_akuno;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_hungry_nether_ray";
+    pNewScript = new Script("npc_hungry_nether_ray");
     pNewScript->GetAI = &GetAI_npc_hungry_nether_ray;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_letoll";
+    pNewScript = new Script("npc_letoll");
     pNewScript->GetAI = &GetAI_npc_letoll;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_letoll;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_mana_bomb_exp_trigger";
+    pNewScript = new Script("npc_mana_bomb_exp_trigger");
     pNewScript->GetAI = &GetAI_npc_mana_bomb_exp_trigger;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_mana_bomb";
+    pNewScript = new Script("go_mana_bomb");
     pNewScript->pGOUse = &GOUse_go_mana_bomb;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_veil_skith_cage";
+    pNewScript = new Script("go_veil_skith_cage");
     pNewScript->pGOUse = &GOUse_go_veil_skith_cage;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_captive_child";
+    pNewScript = new Script("npc_captive_child");
     pNewScript->GetAI = &GetAI_npc_captive_child;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_isla_starmane";
+    pNewScript = new Script("npc_isla_starmane");
     pNewScript->GetAI = &GetAI_npc_isla_starmane;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_isla_starmane;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_skywing";
+    pNewScript = new Script("npc_skywing");
     pNewScript->GetAI = &GetAI_npc_skywing;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_skywing;
     pNewScript->RegisterSelf();

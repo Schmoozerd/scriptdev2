@@ -136,8 +136,7 @@ void AddSC_boss_pandemonius()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_pandemonius";
+    pNewScript = new Script("boss_pandemonius");
     pNewScript->GetAI = &GetAI_boss_pandemonius;
     pNewScript->RegisterSelf();
 }

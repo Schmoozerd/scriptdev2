@@ -853,23 +853,19 @@ void AddSC_boss_sindragosa()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sindragosa";
+    pNewScript = new Script("boss_sindragosa");
     pNewScript->GetAI = &GetAI_boss_sindragosa;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_rimefang_icc";
+    pNewScript = new Script("npc_rimefang_icc");
     pNewScript->GetAI = &GetAI_npc_rimefang_icc;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_spinestalker_icc";
+    pNewScript = new Script("npc_spinestalker_icc");
     pNewScript->GetAI = &GetAI_npc_spinestalker_icc;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_frost_bomb";
+    pNewScript = new Script("mob_frost_bomb");
     pNewScript->GetAI = &GetAI_mob_frost_bomb;
     pNewScript->RegisterSelf();
 }

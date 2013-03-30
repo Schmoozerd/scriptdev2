@@ -311,8 +311,7 @@ void AddSC_boss_warchief_kargath_bladefist()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_warchief_kargath_bladefist";
+    pNewScript = new Script("boss_warchief_kargath_bladefist");
     pNewScript->GetAI = &GetAI_boss_warchief_kargath_bladefist;
     pNewScript->RegisterSelf();
 }

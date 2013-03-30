@@ -970,21 +970,18 @@ void AddSC_moonglade()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_clintar_dw_spirit";
+    pNewScript = new Script("npc_clintar_dw_spirit");
     pNewScript->GetAI = &GetAI_npc_clintar_dw_spirit;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_clintar_dw_spirit;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_keeper_remulos";
+    pNewScript = new Script("npc_keeper_remulos");
     pNewScript->GetAI = &GetAI_npc_keeper_remulos;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_keeper_remulos;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_conjure_rift;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_eranikus";
+    pNewScript = new Script("boss_eranikus");
     pNewScript->GetAI = &GetAI_boss_eranikus;
     pNewScript->RegisterSelf();
 }

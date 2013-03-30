@@ -152,13 +152,11 @@ void AddSC_wetlands()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_tapoke_slim_jahn";
+    pNewScript = new Script("npc_tapoke_slim_jahn");
     pNewScript->GetAI = &GetAI_npc_tapoke_slim_jahn;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_mikhail";
+    pNewScript = new Script("npc_mikhail");
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_mikhail;
     pNewScript->RegisterSelf();
 }

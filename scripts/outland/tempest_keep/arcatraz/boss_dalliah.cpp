@@ -210,8 +210,7 @@ void AddSC_boss_dalliah()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_dalliah";
+    pNewScript = new Script("boss_dalliah");
     pNewScript->GetAI = &GetAI_boss_dalliah;
     pNewScript->RegisterSelf();
 }

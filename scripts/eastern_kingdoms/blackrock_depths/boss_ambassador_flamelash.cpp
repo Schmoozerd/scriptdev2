@@ -114,8 +114,7 @@ void AddSC_boss_ambassador_flamelash()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ambassador_flamelash";
+    pNewScript = new Script("boss_ambassador_flamelash");
     pNewScript->GetAI = &GetAI_boss_ambassador_flamelash;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_boss_ambassador_flamelash;
     pNewScript->RegisterSelf();

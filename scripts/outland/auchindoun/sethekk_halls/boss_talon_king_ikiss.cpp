@@ -215,8 +215,7 @@ void AddSC_boss_talon_king_ikiss()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_talon_king_ikiss";
+    pNewScript = new Script("boss_talon_king_ikiss");
     pNewScript->GetAI = &GetAI_boss_talon_king_ikiss;
     pNewScript->RegisterSelf();
 }

@@ -786,8 +786,7 @@ void AddSC_instance_stratholme()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_stratholme";
+    pNewScript = new Script("instance_stratholme");
     pNewScript->GetInstanceData = &GetInstanceData_instance_stratholme;
     pNewScript->RegisterSelf();
 }

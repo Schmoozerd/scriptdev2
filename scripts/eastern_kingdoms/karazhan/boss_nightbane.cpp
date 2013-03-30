@@ -388,13 +388,11 @@ void AddSC_boss_nightbane()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_nightbane";
+    pNewScript = new Script("boss_nightbane");
     pNewScript->GetAI = &GetAI_boss_nightbane;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_summon_nightbane";
+    pNewScript = new Script("event_spell_summon_nightbane");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_summon_nightbane;
     pNewScript->RegisterSelf();
 }

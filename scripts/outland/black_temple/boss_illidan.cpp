@@ -1689,40 +1689,33 @@ void AddSC_boss_illidan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_illidan_stormrage";
+    pNewScript = new Script("boss_illidan_stormrage");
     pNewScript->GetAI = &GetAI_boss_illidan_stormrage;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_akama_illidan";
+    pNewScript = new Script("npc_akama_illidan");
     pNewScript->GetAI = &GetAI_npc_akama_illidan;
     pNewScript->pGossipHello = &GossipHello_npc_akama_illidan;
     pNewScript->pGossipSelect = &GossipSelect_npc_akama_illidan;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_maiev_shadowsong";
+    pNewScript = new Script("boss_maiev_shadowsong");
     pNewScript->GetAI = &GetAI_boss_maiev;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_flame_of_azzinoth";
+    pNewScript = new Script("mob_flame_of_azzinoth");
     pNewScript->GetAI = &GetAI_mob_flame_of_azzinoth;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_blade_of_azzinoth";
+    pNewScript = new Script("mob_blade_of_azzinoth");
     pNewScript->GetAI = &GetAI_npc_blade_of_azzinoth;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_cage_trap_trigger";
+    pNewScript = new Script("mob_cage_trap_trigger");
     pNewScript->GetAI = &GetAI_npc_cage_trap_trigger;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_shadow_demon";
+    pNewScript = new Script("mob_shadow_demon");
     pNewScript->GetAI = &GetAI_npc_shadow_demon;
     pNewScript->RegisterSelf();
 }

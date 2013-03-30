@@ -359,13 +359,11 @@ void AddSC_boss_svala()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_svala";
+    pNewScript = new Script("boss_svala");
     pNewScript->GetAI = &GetAI_boss_svala;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_svala_intro";
+    pNewScript = new Script("at_svala_intro");
     pNewScript->pAreaTrigger = &AreaTrigger_at_svala_intro;
     pNewScript->RegisterSelf();
 }

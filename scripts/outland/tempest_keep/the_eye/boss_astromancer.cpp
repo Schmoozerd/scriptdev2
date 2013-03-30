@@ -483,13 +483,11 @@ void AddSC_boss_high_astromancer_solarian()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_high_astromancer_solarian";
+    pNewScript = new Script("boss_high_astromancer_solarian");
     pNewScript->GetAI = &GetAI_boss_high_astromancer_solarian;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_solarium_priest";
+    pNewScript = new Script("mob_solarium_priest");
     pNewScript->GetAI = &GetAI_mob_solarium_priest;
     pNewScript->RegisterSelf();
 }

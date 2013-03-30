@@ -146,8 +146,7 @@ void AddSC_boss_kurinnaxx()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kurinnaxx";
+    pNewScript = new Script("boss_kurinnaxx");
     pNewScript->GetAI = &GetAI_boss_kurinnaxx;
     pNewScript->RegisterSelf();
 }

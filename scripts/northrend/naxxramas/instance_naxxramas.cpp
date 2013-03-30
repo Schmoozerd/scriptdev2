@@ -744,13 +744,11 @@ void AddSC_instance_naxxramas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_naxxramas";
+    pNewScript = new Script("instance_naxxramas");
     pNewScript->GetInstanceData = &GetInstanceData_instance_naxxramas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_naxxramas";
+    pNewScript = new Script("at_naxxramas");
     pNewScript->pAreaTrigger = &AreaTrigger_at_naxxramas;
     pNewScript->RegisterSelf();
 }

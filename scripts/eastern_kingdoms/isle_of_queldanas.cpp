@@ -80,8 +80,7 @@ void AddSC_isle_of_queldanas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_converted_sentry";
+    pNewScript = new Script("npc_converted_sentry");
     pNewScript->GetAI = &GetAI_npc_converted_sentry;
     pNewScript->RegisterSelf();
 }

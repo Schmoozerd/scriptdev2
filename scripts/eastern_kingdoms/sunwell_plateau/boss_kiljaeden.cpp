@@ -770,19 +770,16 @@ void AddSC_boss_kiljaeden()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kiljaeden";
+    pNewScript = new Script("boss_kiljaeden");
     pNewScript->GetAI = &GetAI_boss_kiljaeden;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_darkness_of_souls;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kiljaeden_controller";
+    pNewScript = new Script("npc_kiljaeden_controller");
     pNewScript->GetAI = &GetAI_npc_kiljaeden_controller;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shield_orb";
+    pNewScript = new Script("npc_shield_orb");
     pNewScript->GetAI = &GetAI_npc_shield_orb;
     pNewScript->RegisterSelf();
 }

@@ -460,30 +460,25 @@ void AddSC_azshara()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_rizzle_sprysprocket";
+    pNewScript = new Script("npc_rizzle_sprysprocket");
     pNewScript->GetAI = &GetAI_npc_rizzle_sprysprocket;
     pNewScript->pGossipHello = &GossipHello_npc_rizzle_sprysprocket;
     pNewScript->pGossipSelect = &GossipSelect_npc_rizzle_sprysprocket;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_depth_charge";
+    pNewScript = new Script("npc_depth_charge");
     pNewScript->GetAI = &GetAI_npc_depth_charge;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_southfury_moonstone";
+    pNewScript = new Script("go_southfury_moonstone");
     pNewScript->pGOUse = &GOUse_go_southfury_moonstone;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mobs_spitelashes";
+    pNewScript = new Script("mobs_spitelashes");
     pNewScript->GetAI = &GetAI_mobs_spitelashes;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_loramus_thalipedes";
+    pNewScript = new Script("npc_loramus_thalipedes");
     pNewScript->pGossipHello =  &GossipHello_npc_loramus_thalipedes;
     pNewScript->pGossipSelect = &GossipSelect_npc_loramus_thalipedes;
     pNewScript->RegisterSelf();

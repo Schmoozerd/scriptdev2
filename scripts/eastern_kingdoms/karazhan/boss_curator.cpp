@@ -221,8 +221,7 @@ void AddSC_boss_curator()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_curator";
+    pNewScript = new Script("boss_curator");
     pNewScript->GetAI = &GetAI_boss_curator;
     pNewScript->RegisterSelf();
 }

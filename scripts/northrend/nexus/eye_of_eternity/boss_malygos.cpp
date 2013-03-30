@@ -704,23 +704,19 @@ void AddSC_boss_malygos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_malygos";
+    pNewScript = new Script("boss_malygos");
     pNewScript->GetAI = &GetAI_boss_malygos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_power_spark";
+    pNewScript = new Script("npc_power_spark");
     pNewScript->GetAI = &GetAI_npc_power_spark;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_wyrmrest_skytalon";
+    pNewScript = new Script("npc_wyrmrest_skytalon");
     pNewScript->GetAI = &GetAI_npc_wyrmrest_skytalon;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_go_focusing_iris";
+    pNewScript = new Script("event_go_focusing_iris");
     pNewScript->pProcessEventId = &ProcessEventId_event_go_focusing_iris;
     pNewScript->RegisterSelf();
 }

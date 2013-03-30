@@ -328,8 +328,7 @@ void AddSC_boss_noth()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_noth";
+    pNewScript = new Script("boss_noth");
     pNewScript->GetAI = &GetAI_boss_noth;
     pNewScript->RegisterSelf();
 }

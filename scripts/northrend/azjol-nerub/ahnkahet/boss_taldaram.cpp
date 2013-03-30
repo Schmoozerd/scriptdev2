@@ -330,14 +330,12 @@ void AddSC_boss_taldaram()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_taldaram";
+    pNewScript = new Script("boss_taldaram");
     pNewScript->GetAI = &GetAI_boss_taldaram;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_conjure_flame_orbs;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_nerubian_device";
+    pNewScript = new Script("go_nerubian_device");
     pNewScript->pGOUse = &GOUse_go_nerubian_device;
     pNewScript->RegisterSelf();
 }

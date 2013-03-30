@@ -282,18 +282,15 @@ void AddSC_blades_edge_mountains()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mobs_bladespire_ogre";
+    pNewScript = new Script("mobs_bladespire_ogre");
     pNewScript->GetAI = &GetAI_mobs_bladespire_ogre;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mobs_nether_drake";
+    pNewScript = new Script("mobs_nether_drake");
     pNewScript->GetAI = &GetAI_mobs_nether_drake;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_daranelle";
+    pNewScript = new Script("npc_daranelle");
     pNewScript->GetAI = &GetAI_npc_daranelle;
     pNewScript->RegisterSelf();
 }

@@ -550,23 +550,19 @@ void AddSC_boss_four_horsemen()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lady_blaumeux";
+    pNewScript = new Script("boss_lady_blaumeux");
     pNewScript->GetAI = &GetAI_boss_lady_blaumeux;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_rivendare_naxx";
+    pNewScript = new Script("boss_rivendare_naxx");
     pNewScript->GetAI = &GetAI_boss_rivendare_naxx;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_thane_korthazz";
+    pNewScript = new Script("boss_thane_korthazz");
     pNewScript->GetAI = &GetAI_boss_thane_korthazz;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sir_zeliek";
+    pNewScript = new Script("boss_sir_zeliek");
     pNewScript->GetAI = &GetAI_boss_sir_zeliek;
     pNewScript->RegisterSelf();
 }

@@ -438,18 +438,15 @@ void AddSC_boss_grand_warlock_nethekurse()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_grand_warlock_nethekurse";
+    pNewScript = new Script("boss_grand_warlock_nethekurse");
     pNewScript->GetAI = &GetAI_boss_grand_warlock_nethekurse;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_fel_orc_convert";
+    pNewScript = new Script("mob_fel_orc_convert");
     pNewScript->GetAI = &GetAI_mob_fel_orc_convert;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_lesser_shadow_fissure";
+    pNewScript = new Script("mob_lesser_shadow_fissure");
     pNewScript->GetAI = &GetAI_mob_lesser_shadow_fissure;
     pNewScript->RegisterSelf();
 }

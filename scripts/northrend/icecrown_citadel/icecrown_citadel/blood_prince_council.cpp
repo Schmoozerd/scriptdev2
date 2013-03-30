@@ -870,43 +870,35 @@ void AddSC_blood_prince_council()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_queen_lanathel_intro";
+    pNewScript = new Script("npc_queen_lanathel_intro");
     pNewScript->GetAI = &GetAI_npc_queen_lanathel_intro;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ball_of_flame";
+    pNewScript = new Script("npc_ball_of_flame");
     pNewScript->GetAI = &GetAI_npc_ball_of_flame;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kinetic_bomb";
+    pNewScript = new Script("npc_kinetic_bomb");
     pNewScript->GetAI = &GetAI_npc_kinetic_bomb;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dark_nucleus";
+    pNewScript = new Script("npc_dark_nucleus");
     pNewScript->GetAI = &GetAI_npc_dark_nucleus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_blood_orb_control";
+    pNewScript = new Script("npc_blood_orb_control");
     pNewScript->GetAI = &GetAI_npc_blood_orb_control;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_taldaram_icc";
+    pNewScript = new Script("boss_taldaram_icc");
     pNewScript->GetAI = &GetAI_boss_taldaram_icc;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_keleseth_icc";
+    pNewScript = new Script("boss_keleseth_icc");
     pNewScript->GetAI = &GetAI_boss_keleseth_icc;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_valanar_icc";
+    pNewScript = new Script("boss_valanar_icc");
     pNewScript->GetAI = &GetAI_boss_valanar_icc;
     pNewScript->RegisterSelf();
 }

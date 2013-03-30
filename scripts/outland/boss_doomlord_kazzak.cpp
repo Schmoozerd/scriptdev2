@@ -210,8 +210,7 @@ void AddSC_boss_doomlordkazzak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_doomlord_kazzak";
+    pNewScript = new Script("boss_doomlord_kazzak");
     pNewScript->GetAI = &GetAI_boss_doomlordkazzak;
     pNewScript->RegisterSelf();
 }

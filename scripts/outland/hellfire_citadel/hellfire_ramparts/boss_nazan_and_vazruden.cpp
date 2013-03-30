@@ -445,13 +445,11 @@ void AddSC_boss_nazan_and_vazruden()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_vazruden";
+    pNewScript = new Script("boss_vazruden");
     pNewScript->GetAI = &GetAI_boss_vazruden;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_vazruden_herald";
+    pNewScript = new Script("boss_vazruden_herald");
     pNewScript->GetAI = &GetAI_boss_vazruden_herald;
     pNewScript->RegisterSelf();
 }

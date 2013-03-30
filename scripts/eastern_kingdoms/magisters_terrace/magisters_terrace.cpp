@@ -114,13 +114,11 @@ void AddSC_magisters_terrace()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kalecgos";
+    pNewScript = new Script("npc_kalecgos");
     pNewScript->GetAI = &GetAI_npc_kalecgos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_go_scrying_orb";
+    pNewScript = new Script("event_go_scrying_orb");
     pNewScript->pProcessEventId = &ProcessEventId_event_go_scrying_orb;
     pNewScript->RegisterSelf();
 }

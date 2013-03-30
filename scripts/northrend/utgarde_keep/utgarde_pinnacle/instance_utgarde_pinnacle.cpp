@@ -339,8 +339,7 @@ void AddSC_instance_pinnacle()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_pinnacle";
+    pNewScript = new Script("instance_pinnacle");
     pNewScript->GetInstanceData = &GetInstanceData_instance_pinnacle;
     pNewScript->RegisterSelf();
 }

@@ -693,23 +693,19 @@ void AddSC_instance_blackrock_spire()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_blackrock_spire";
+    pNewScript = new Script("instance_blackrock_spire");
     pNewScript->GetInstanceData = &GetInstanceData_instance_blackrock_spire;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_blackrock_spire";
+    pNewScript = new Script("at_blackrock_spire");
     pNewScript->pAreaTrigger = &AreaTrigger_at_blackrock_spire;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_altar_emberseer";
+    pNewScript = new Script("event_spell_altar_emberseer");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_altar_emberseer;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_father_flame";
+    pNewScript = new Script("go_father_flame");
     pNewScript->pGOUse = &GOUse_go_father_flame;
     pNewScript->RegisterSelf();
 }

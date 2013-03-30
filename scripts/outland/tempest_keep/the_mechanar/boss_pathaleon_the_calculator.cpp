@@ -261,13 +261,11 @@ void AddSC_boss_pathaleon_the_calculator()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_pathaleon_the_calculator";
+    pNewScript = new Script("boss_pathaleon_the_calculator");
     pNewScript->GetAI = &GetAI_boss_pathaleon_the_calculator;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_nether_wraith";
+    pNewScript = new Script("mob_nether_wraith");
     pNewScript->GetAI = &GetAI_mob_nether_wraith;
     pNewScript->RegisterSelf();
 }

@@ -903,30 +903,25 @@ void AddSC_shadowfang_keep()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shadowfang_prisoner";
+    pNewScript = new Script("npc_shadowfang_prisoner");
     pNewScript->pGossipHello =  &GossipHello_npc_shadowfang_prisoner;
     pNewScript->pGossipSelect = &GossipSelect_npc_shadowfang_prisoner;
     pNewScript->GetAI = &GetAI_npc_shadowfang_prisoner;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_arugal_voidwalker";
+    pNewScript = new Script("mob_arugal_voidwalker");
     pNewScript->GetAI = &GetAI_mob_arugal_voidwalker;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_arugal";
+    pNewScript = new Script("npc_arugal");
     pNewScript->GetAI = &GetAI_npc_arugal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_arugal";
+    pNewScript = new Script("boss_arugal");
     pNewScript->GetAI = &GetAI_boss_arugal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_deathstalker_vincent";
+    pNewScript = new Script("npc_deathstalker_vincent");
     pNewScript->GetAI = &GetAI_npc_deathstalker_vincent;
     pNewScript->RegisterSelf();
 }

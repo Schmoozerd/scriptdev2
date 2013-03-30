@@ -220,8 +220,7 @@ void AddSC_boss_venoxis()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_venoxis";
+    pNewScript = new Script("boss_venoxis");
     pNewScript->GetAI = &GetAI_boss_venoxis;
     pNewScript->RegisterSelf();
 }

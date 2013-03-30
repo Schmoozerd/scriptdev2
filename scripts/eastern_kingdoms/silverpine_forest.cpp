@@ -306,14 +306,12 @@ void AddSC_silverpine_forest()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_deathstalker_erland";
+    pNewScript = new Script("npc_deathstalker_erland");
     pNewScript->GetAI = &GetAI_npc_deathstalker_erland;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_deathstalker_erland;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_deathstalker_faerleia";
+    pNewScript = new Script("npc_deathstalker_faerleia");
     pNewScript->GetAI = &GetAI_npc_deathstalker_faerleia;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_deathstalker_faerleia;
     pNewScript->RegisterSelf();

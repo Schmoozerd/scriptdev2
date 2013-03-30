@@ -89,8 +89,7 @@ void AddSC_dalaran()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dalaran_guardian_mage";
+    pNewScript = new Script("npc_dalaran_guardian_mage");
     pNewScript->GetAI = &GetAI_npc_dalaran_guardian_mage;
     pNewScript->RegisterSelf();
 }

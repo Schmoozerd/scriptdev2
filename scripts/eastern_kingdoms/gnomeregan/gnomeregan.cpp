@@ -629,8 +629,7 @@ void AddSC_gnomeregan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_blastmaster_emi_shortfuse";
+    pNewScript = new Script("npc_blastmaster_emi_shortfuse");
     pNewScript->GetAI = &GetAI_npc_blastmaster_emi_shortfuse;
     pNewScript->pGossipHello = &GossipHello_npc_blastmaster_emi_shortfuse;
     pNewScript->pGossipSelect = &GossipSelect_npc_blastmaster_emi_shortfuse;

@@ -512,18 +512,15 @@ void AddSC_instance_icecrown_citadel()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_icecrown_citadel";
+    pNewScript = new Script("instance_icecrown_citadel");
     pNewScript->GetInstanceData = &GetInstanceData_instance_icecrown_citadel;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_icecrown_citadel";
+    pNewScript = new Script("at_icecrown_citadel");
     pNewScript->pAreaTrigger = &AreaTrigger_at_icecrown_citadel;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_gameobject_citadel_valve";
+    pNewScript = new Script("event_gameobject_citadel_valve");
     pNewScript->pProcessEventId = &ProcessEventId_event_gameobject_citadel_valve;
     pNewScript->RegisterSelf();
 }

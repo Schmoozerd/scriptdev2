@@ -308,13 +308,11 @@ void AddSC_boss_akilzon()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_akilzon";
+    pNewScript = new Script("boss_akilzon");
     pNewScript->GetAI = &GetAI_boss_akilzon;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_soaring_eagle";
+    pNewScript = new Script("mob_soaring_eagle");
     pNewScript->GetAI = &GetAI_mob_soaring_eagle;
     pNewScript->RegisterSelf();
 }

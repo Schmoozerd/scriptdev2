@@ -713,8 +713,7 @@ void AddSC_boss_the_lich_king()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_the_lich_king_icc";
+    pNewScript = new Script("boss_the_lich_king_icc");
     pNewScript->GetAI = &GetAI_boss_the_lich_king_icc;
     pNewScript->RegisterSelf();
 }

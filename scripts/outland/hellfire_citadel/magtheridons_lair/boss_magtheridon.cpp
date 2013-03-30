@@ -562,28 +562,23 @@ void AddSC_boss_magtheridon()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_magtheridon";
+    pNewScript = new Script("boss_magtheridon");
     pNewScript->GetAI = &GetAI_boss_magtheridon;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_hellfire_channeler";
+    pNewScript = new Script("mob_hellfire_channeler");
     pNewScript->GetAI = &GetAI_mob_hellfire_channeler;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_manticron_cube";
+    pNewScript = new Script("go_manticron_cube");
     pNewScript->pGOUse = &GOUse_go_manticron_cube;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_target_trigger";
+    pNewScript = new Script("npc_target_trigger");
     pNewScript->GetAI = &GetAI_npc_target_triggerAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_abyssal";
+    pNewScript = new Script("mob_abyssal");
     pNewScript->GetAI = &GetAI_mob_abyssalAI;
     pNewScript->RegisterSelf();
 }

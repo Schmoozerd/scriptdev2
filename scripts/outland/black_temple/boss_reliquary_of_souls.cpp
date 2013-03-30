@@ -685,28 +685,23 @@ void AddSC_boss_reliquary_of_souls()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_reliquary_of_souls";
+    pNewScript = new Script("boss_reliquary_of_souls");
     pNewScript->GetAI = &GetAI_boss_reliquary_of_souls;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_essence_of_suffering";
+    pNewScript = new Script("boss_essence_of_suffering");
     pNewScript->GetAI = &GetAI_boss_essence_of_suffering;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_essence_of_desire";
+    pNewScript = new Script("boss_essence_of_desire");
     pNewScript->GetAI = &GetAI_boss_essence_of_desire;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_essence_of_anger";
+    pNewScript = new Script("boss_essence_of_anger");
     pNewScript->GetAI = &GetAI_boss_essence_of_anger;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_enslaved_soul";
+    pNewScript = new Script("npc_enslaved_soul");
     pNewScript->GetAI = &GetAI_npc_enslaved_soul;
     pNewScript->RegisterSelf();
 }

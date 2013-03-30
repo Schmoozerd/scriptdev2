@@ -216,13 +216,11 @@ void AddSC_instance_nexus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_nexus";
+    pNewScript = new Script("instance_nexus");
     pNewScript->GetInstanceData = &GetInstanceData_instance_nexus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_containment_sphere";
+    pNewScript = new Script("go_containment_sphere");
     pNewScript->pGOUse = &GOUse_go_containment_sphere;
     pNewScript->RegisterSelf();
 }

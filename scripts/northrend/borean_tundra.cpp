@@ -521,30 +521,25 @@ void AddSC_borean_tundra()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_nesingwary_trapper";
+    pNewScript = new Script("npc_nesingwary_trapper");
     pNewScript->GetAI = &GetAI_npc_nesingwary_trapper;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_oil_stained_wolf";
+    pNewScript = new Script("npc_oil_stained_wolf");
     pNewScript->GetAI = &GetAI_npc_oil_stained_wolf;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_oil_stained_wolf;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_npc_oil_stained_wolf;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_caribou_trap";
+    pNewScript = new Script("go_caribou_trap");
     pNewScript->pGOUse = &GOUse_go_caribou_trap;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_sinkhole_kill_credit";
+    pNewScript = new Script("npc_sinkhole_kill_credit");
     pNewScript->GetAI = &GetAI_npc_sinkhole_kill_credit;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lurgglbr";
+    pNewScript = new Script("npc_lurgglbr");
     pNewScript->GetAI = &GetAI_npc_lurgglbr;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_lurgglbr;
     pNewScript->RegisterSelf();

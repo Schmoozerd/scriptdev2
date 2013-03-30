@@ -501,8 +501,7 @@ void AddSC_boss_lady_deathwhisper()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lady_deathwhisper";
+    pNewScript = new Script("boss_lady_deathwhisper");
     pNewScript->GetAI = &GetAI_boss_lady_deathwhisper;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_mana_barrier;
     pNewScript->RegisterSelf();

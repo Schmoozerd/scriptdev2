@@ -654,23 +654,19 @@ void AddSC_boss_felblood_kaelthas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_felblood_kaelthas";
+    pNewScript = new Script("boss_felblood_kaelthas");
     pNewScript->GetAI = &GetAI_boss_felblood_kaelthas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_arcane_sphere";
+    pNewScript = new Script("mob_arcane_sphere");
     pNewScript->GetAI = &GetAI_mob_arcane_sphere;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_felkael_phoenix";
+    pNewScript = new Script("mob_felkael_phoenix");
     pNewScript->GetAI = &GetAI_mob_felkael_phoenix;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_felkael_phoenix_egg";
+    pNewScript = new Script("mob_felkael_phoenix_egg");
     pNewScript->GetAI = &GetAI_mob_felkael_phoenix_egg;
     pNewScript->RegisterSelf();
 }

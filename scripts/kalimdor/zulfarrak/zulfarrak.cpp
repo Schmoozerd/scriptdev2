@@ -263,27 +263,23 @@ void AddSC_zulfarrak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_sergeant_bly";
+    pNewScript = new Script("npc_sergeant_bly");
     pNewScript->GetAI = &GetAI_npc_sergeant_bly;
     pNewScript->pGossipHello =  &GossipHello_npc_sergeant_bly;
     pNewScript->pGossipSelect = &GossipSelect_npc_sergeant_bly;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_weegli_blastfuse";
+    pNewScript = new Script("npc_weegli_blastfuse");
     pNewScript->GetAI = &GetAI_npc_weegli_blastfuse;
     pNewScript->pGossipHello =  &GossipHello_npc_weegli_blastfuse;
     pNewScript->pGossipSelect = &GossipSelect_npc_weegli_blastfuse;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_go_zulfarrak_gong";
+    pNewScript = new Script("event_go_zulfarrak_gong");
     pNewScript->pProcessEventId = &ProcessEventId_event_go_zulfarrak_gong;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_zulfarrak";
+    pNewScript = new Script("at_zulfarrak");
     pNewScript->pAreaTrigger = &AreaTrigger_at_zulfarrak;
     pNewScript->RegisterSelf();
 }

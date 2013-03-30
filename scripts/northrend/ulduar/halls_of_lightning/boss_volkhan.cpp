@@ -415,19 +415,16 @@ void AddSC_boss_volkhan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_volkhan";
+    pNewScript = new Script("boss_volkhan");
     pNewScript->GetAI = &GetAI_boss_volkhan;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_boss_volkhan;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_volkhan_anvil";
+    pNewScript = new Script("npc_volkhan_anvil");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_volkhan_anvil;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_molten_golem";
+    pNewScript = new Script("mob_molten_golem");
     pNewScript->GetAI = &GetAI_mob_molten_golem;
     pNewScript->RegisterSelf();
 }

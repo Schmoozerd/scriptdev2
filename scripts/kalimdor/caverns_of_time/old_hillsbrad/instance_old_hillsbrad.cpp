@@ -357,13 +357,11 @@ void AddSC_instance_old_hillsbrad()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_old_hillsbrad";
+    pNewScript = new Script("instance_old_hillsbrad");
     pNewScript->GetInstanceData = &GetInstanceData_instance_old_hillsbrad;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_go_barrel_old_hillsbrad";
+    pNewScript = new Script("event_go_barrel_old_hillsbrad");
     pNewScript->pProcessEventId = &ProcessEventId_event_go_barrel_old_hillsbrad;
     pNewScript->RegisterSelf();
 }

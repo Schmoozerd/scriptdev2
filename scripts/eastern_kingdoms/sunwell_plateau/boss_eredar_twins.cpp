@@ -564,18 +564,15 @@ void AddSC_boss_eredar_twins()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_alythess";
+    pNewScript = new Script("boss_alythess");
     pNewScript->GetAI = &GetAI_boss_alythess;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sacrolash";
+    pNewScript = new Script("boss_sacrolash");
     pNewScript->GetAI = &GetAI_boss_sacrolash;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shadow_image";
+    pNewScript = new Script("npc_shadow_image");
     pNewScript->GetAI = &GetAI_npc_shadow_image;
     pNewScript->RegisterSelf();
 }

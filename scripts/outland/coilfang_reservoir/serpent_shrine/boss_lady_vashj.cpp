@@ -501,18 +501,15 @@ void AddSC_boss_lady_vashj()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lady_vashj";
+    pNewScript = new Script("boss_lady_vashj");
     pNewScript->GetAI = &GetAI_boss_lady_vashj;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_enchanted_elemental";
+    pNewScript = new Script("mob_enchanted_elemental");
     pNewScript->GetAI = &GetAI_mob_enchanted_elemental;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_shield_generator";
+    pNewScript = new Script("go_shield_generator");
     pNewScript->pGOUse = &GOUse_go_shield_generator;
     pNewScript->RegisterSelf();
 }

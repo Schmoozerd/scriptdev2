@@ -230,8 +230,7 @@ void AddSC_boss_dathrohan_balnazzar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_dathrohan_balnazzar";
+    pNewScript = new Script("boss_dathrohan_balnazzar");
     pNewScript->GetAI = &GetAI_boss_dathrohan_balnazzar;
     pNewScript->RegisterSelf();
 }

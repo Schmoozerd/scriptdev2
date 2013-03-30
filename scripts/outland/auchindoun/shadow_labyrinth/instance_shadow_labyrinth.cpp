@@ -194,8 +194,7 @@ void AddSC_instance_shadow_labyrinth()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_shadow_labyrinth";
+    pNewScript = new Script("instance_shadow_labyrinth");
     pNewScript->GetInstanceData = &GetInstanceData_instance_shadow_labyrinth;
     pNewScript->RegisterSelf();
 }

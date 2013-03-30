@@ -395,13 +395,11 @@ void AddSC_boss_mandokir()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_mandokir";
+    pNewScript = new Script("boss_mandokir");
     pNewScript->GetAI = &GetAI_boss_mandokir;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_ohgan";
+    pNewScript = new Script("mob_ohgan");
     pNewScript->GetAI = &GetAI_mob_ohgan;
     pNewScript->RegisterSelf();
 }

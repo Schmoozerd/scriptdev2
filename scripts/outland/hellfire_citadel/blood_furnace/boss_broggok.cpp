@@ -177,13 +177,11 @@ void AddSC_boss_broggok()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_broggok";
+    pNewScript = new Script("boss_broggok");
     pNewScript->GetAI = &GetAI_boss_broggok;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_broggok_poisoncloud";
+    pNewScript = new Script("mob_broggok_poisoncloud");
     pNewScript->GetAI = &GetAI_mob_broggok_poisoncloud;
     pNewScript->RegisterSelf();
 }

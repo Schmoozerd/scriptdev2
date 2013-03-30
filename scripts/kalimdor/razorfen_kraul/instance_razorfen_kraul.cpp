@@ -126,8 +126,7 @@ void AddSC_instance_razorfen_kraul()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_razorfen_kraul";
+    pNewScript = new Script("instance_razorfen_kraul");
     pNewScript->GetInstanceData = &GetInstanceData_instance_razorfen_kraul;
     pNewScript->RegisterSelf();
 }

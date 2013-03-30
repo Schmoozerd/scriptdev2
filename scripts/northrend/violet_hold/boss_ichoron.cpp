@@ -154,8 +154,7 @@ void AddSC_boss_ichoron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ichoron";
+    pNewScript = new Script("boss_ichoron");
     pNewScript->GetAI = &GetAI_boss_ichoron;
     pNewScript->RegisterSelf();
 }

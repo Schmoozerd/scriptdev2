@@ -245,8 +245,7 @@ void AddSC_boss_soccothrates()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_soccothrates";
+    pNewScript = new Script("boss_soccothrates");
     pNewScript->GetAI = &GetAI_boss_soccothrates;
     pNewScript->RegisterSelf();
 }

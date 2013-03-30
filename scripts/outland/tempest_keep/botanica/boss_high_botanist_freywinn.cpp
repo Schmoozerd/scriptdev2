@@ -200,8 +200,7 @@ void AddSC_boss_high_botanist_freywinn()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_high_botanist_freywinn";
+    pNewScript = new Script("boss_high_botanist_freywinn");
     pNewScript->GetAI = &GetAI_boss_high_botanist_freywinn;
     pNewScript->RegisterSelf();
 }

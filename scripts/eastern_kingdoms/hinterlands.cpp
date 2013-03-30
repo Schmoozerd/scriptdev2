@@ -327,14 +327,12 @@ void AddSC_hinterlands()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_00x09hl";
+    pNewScript = new Script("npc_00x09hl");
     pNewScript->GetAI = &GetAI_npc_00x09hl;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_00x09hl;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_rinji";
+    pNewScript = new Script("npc_rinji");
     pNewScript->GetAI = &GetAI_npc_rinji;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_rinji;
     pNewScript->RegisterSelf();

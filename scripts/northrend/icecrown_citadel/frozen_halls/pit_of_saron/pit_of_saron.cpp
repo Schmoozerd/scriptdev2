@@ -185,19 +185,16 @@ void AddSC_pit_of_saron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ymirjar_deathbringer";
+    pNewScript = new Script("npc_ymirjar_deathbringer");
     pNewScript->GetAI = &GetAI_npc_ymirjar_deathbringer;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_summon_undead;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_collapsing_icicle";
+    pNewScript = new Script("npc_collapsing_icicle");
     pNewScript->GetAI = &GetAI_npc_collapsing_icicle;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_pit_of_saron";
+    pNewScript = new Script("at_pit_of_saron");
     pNewScript->pAreaTrigger = &AreaTrigger_at_pit_of_saron;
     pNewScript->RegisterSelf();
 }

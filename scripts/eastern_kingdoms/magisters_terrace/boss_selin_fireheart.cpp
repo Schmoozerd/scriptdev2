@@ -317,13 +317,11 @@ void AddSC_boss_selin_fireheart()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_selin_fireheart";
+    pNewScript = new Script("boss_selin_fireheart");
     pNewScript->GetAI = &GetAI_boss_selin_fireheart;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_fel_crystal";
+    pNewScript = new Script("mob_fel_crystal");
     pNewScript->GetAI = &GetAI_mob_fel_crystal;
     pNewScript->RegisterSelf();
 }

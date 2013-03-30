@@ -175,13 +175,11 @@ void AddSC_boss_herod()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_herod";
+    pNewScript = new Script("boss_herod");
     pNewScript->GetAI = &GetAI_boss_herod;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_scarlet_trainee";
+    pNewScript = new Script("mob_scarlet_trainee");
     pNewScript->GetAI = &GetAI_mob_scarlet_trainee;
     pNewScript->RegisterSelf();
 }

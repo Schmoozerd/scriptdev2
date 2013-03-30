@@ -347,8 +347,7 @@ void AddSC_instance_karazhan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_karazhan";
+    pNewScript = new Script("instance_karazhan");
     pNewScript->GetInstanceData = &GetInstanceData_instance_karazhan;
     pNewScript->RegisterSelf();
 }

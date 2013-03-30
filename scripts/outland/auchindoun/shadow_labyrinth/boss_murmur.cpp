@@ -162,8 +162,7 @@ void AddSC_boss_murmur()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_murmur";
+    pNewScript = new Script("boss_murmur");
     pNewScript->GetAI = &GetAI_boss_murmur;
     pNewScript->RegisterSelf();
 }

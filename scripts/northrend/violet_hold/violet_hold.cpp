@@ -602,30 +602,25 @@ void AddSC_violet_hold()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_activation_crystal";
+    pNewScript = new Script("go_activation_crystal");
     pNewScript->pGOUse = &GOUse_go_activation_crystal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_door_seal";
+    pNewScript = new Script("npc_door_seal");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_door_seal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_sinclari";
+    pNewScript = new Script("npc_sinclari");
     pNewScript->GetAI = &GetAI_npc_sinclari;
     pNewScript->pGossipHello = &GossipHello_npc_sinclari;
     pNewScript->pGossipSelect = &GossipSelect_npc_sinclari;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_prison_event_controller";
+    pNewScript = new Script("npc_prison_event_controller");
     pNewScript->GetAI = &GetAI_npc_prison_event_controller;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_teleportation_portal";
+    pNewScript = new Script("npc_teleportation_portal");
     pNewScript->GetAI = &GetAI_npc_teleportation_portal;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_teleportation_portal;
     pNewScript->RegisterSelf();

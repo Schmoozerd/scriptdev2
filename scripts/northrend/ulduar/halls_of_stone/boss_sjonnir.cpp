@@ -278,8 +278,7 @@ void AddSC_boss_sjonnir()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sjonnir";
+    pNewScript = new Script("boss_sjonnir");
     pNewScript->GetAI = &GetAI_boss_sjonnir;
     pNewScript->RegisterSelf();
 }

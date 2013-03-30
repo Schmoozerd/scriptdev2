@@ -266,13 +266,11 @@ void AddSC_instance_blackfathom_deeps()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_blackfathom_deeps";
+    pNewScript = new Script("instance_blackfathom_deeps");
     pNewScript->GetInstanceData = &GetInstanceData_instance_blackfathom_deeps;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_fire_of_akumai";
+    pNewScript = new Script("go_fire_of_akumai");
     pNewScript->pGOUse = &GOUse_go_fire_of_akumai;
     pNewScript->RegisterSelf();
 }

@@ -149,8 +149,7 @@ void AddSC_boss_ambassador_hellmaw()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ambassador_hellmaw";
+    pNewScript = new Script("boss_ambassador_hellmaw");
     pNewScript->GetAI = &GetAI_boss_ambassador_hellmaw;
     pNewScript->RegisterSelf();
 }

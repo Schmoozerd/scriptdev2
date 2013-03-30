@@ -132,8 +132,7 @@ void AddSC_instance_the_eye()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_the_eye";
+    pNewScript = new Script("instance_the_eye");
     pNewScript->GetInstanceData = &GetInstanceData_instance_the_eye;
     pNewScript->RegisterSelf();
 }

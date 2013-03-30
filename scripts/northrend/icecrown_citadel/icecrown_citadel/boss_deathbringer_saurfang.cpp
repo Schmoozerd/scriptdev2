@@ -396,8 +396,7 @@ void AddSC_boss_deathbringer_saurfang()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_deathbringer_saurfang";
+    pNewScript = new Script("boss_deathbringer_saurfang");
     pNewScript->GetAI = &GetAI_boss_deathbringer_saurfang;
     pNewScript->RegisterSelf();
 }

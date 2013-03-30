@@ -126,8 +126,7 @@ void AddSC_boss_viscidus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_viscidus";
+    pNewScript = new Script("boss_viscidus");
     pNewScript->GetAI = &GetAI_boss_viscidus;
     pNewScript->RegisterSelf();
 }

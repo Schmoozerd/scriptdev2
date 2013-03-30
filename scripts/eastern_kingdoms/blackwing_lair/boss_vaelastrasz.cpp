@@ -376,15 +376,13 @@ void AddSC_boss_vaelastrasz()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_vaelastrasz";
+    pNewScript = new Script("boss_vaelastrasz");
     pNewScript->GetAI = &GetAI_boss_vaelastrasz;
     pNewScript->pGossipHello = &GossipHello_boss_vaelastrasz;
     pNewScript->pGossipSelect = &GossipSelect_boss_vaelastrasz;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_vaelastrasz";
+    pNewScript = new Script("at_vaelastrasz");
     pNewScript->pAreaTrigger = &AreaTrigger_at_vaelastrasz;
     pNewScript->RegisterSelf();
 }

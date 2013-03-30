@@ -238,8 +238,7 @@ void AddSC_boss_felmyst()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_felmyst";
+    pNewScript = new Script("boss_felmyst");
     pNewScript->GetAI = &GetAI_boss_felmyst;
     pNewScript->RegisterSelf();
 }

@@ -105,8 +105,7 @@ void AddSC_stonetalon_mountains()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kaya";
+    pNewScript = new Script("npc_kaya");
     pNewScript->GetAI = &GetAI_npc_kaya;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_kaya;
     pNewScript->RegisterSelf();

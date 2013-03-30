@@ -367,8 +367,7 @@ void AddSC_boss_urom()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_urom";
+    pNewScript = new Script("boss_urom");
     pNewScript->GetAI = &GetAI_boss_urom;
     pNewScript->RegisterSelf();
 }

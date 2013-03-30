@@ -488,8 +488,7 @@ void AddSC_instance_pit_of_saron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_pit_of_saron";
+    pNewScript = new Script("instance_pit_of_saron");
     pNewScript->GetInstanceData = &GetInstanceData_instance_pit_of_saron;
     pNewScript->RegisterSelf();
 }

@@ -229,15 +229,13 @@ void AddSC_culling_of_stratholme()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_chromie";
+    pNewScript = new Script("npc_chromie");
     pNewScript->pGossipHello = &GossipHello_npc_chromie;
     pNewScript->pGossipSelect = &GossipSelect_npc_chromie;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_chromie;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "spell_dummy_npc_crates_bunny";
+    pNewScript = new Script("spell_dummy_npc_crates_bunny");
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_npc_crates_dummy;
     pNewScript->RegisterSelf();
 }

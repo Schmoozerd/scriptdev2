@@ -521,23 +521,19 @@ void AddSC_boss_janalai()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_janalai";
+    pNewScript = new Script("boss_janalai");
     pNewScript->GetAI = &GetAI_boss_janalaiAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_dragonhawk_egg";
+    pNewScript = new Script("npc_dragonhawk_egg");
     pNewScript->GetAI = &GetAI_npc_dragonhawk_eggAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_janalai_firebomb";
+    pNewScript = new Script("npc_janalai_firebomb");
     pNewScript->GetAI = &GetAI_npc_janalai_firebombAI;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_amanishi_hatcher";
+    pNewScript = new Script("npc_amanishi_hatcher");
     pNewScript->GetAI = &GetAI_npc_amanishi_hatcherAI;
     pNewScript->RegisterSelf();
 }

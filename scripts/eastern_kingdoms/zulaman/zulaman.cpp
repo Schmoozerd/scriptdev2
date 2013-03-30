@@ -242,20 +242,17 @@ void AddSC_zulaman()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_forest_frog";
+    pNewScript = new Script("npc_forest_frog");
     pNewScript->GetAI = &GetAI_npc_forest_frog;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_harrison_jones_za";
+    pNewScript = new Script("npc_harrison_jones_za");
     pNewScript->GetAI = &GetAI_npc_harrison_jones_za;
     pNewScript->pGossipHello =  &GossipHello_npc_harrison_jones_za;
     pNewScript->pGossipSelect = &GossipSelect_npc_harrison_jones_za;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_strange_gong";
+    pNewScript = new Script("go_strange_gong");
     pNewScript->pGOUse = &GOUse_go_strange_gong;
     pNewScript->RegisterSelf();
 }

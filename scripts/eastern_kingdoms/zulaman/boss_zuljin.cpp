@@ -426,8 +426,7 @@ void AddSC_boss_zuljin()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_zuljin";
+    pNewScript = new Script("boss_zuljin");
     pNewScript->GetAI = &GetAI_boss_zuljin;
     pNewScript->RegisterSelf();
 }

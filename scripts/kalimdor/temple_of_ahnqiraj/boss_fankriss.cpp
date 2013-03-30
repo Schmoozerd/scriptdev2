@@ -176,8 +176,7 @@ void AddSC_boss_fankriss()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_fankriss";
+    pNewScript = new Script("boss_fankriss");
     pNewScript->GetAI = &GetAI_boss_fankriss;
     pNewScript->RegisterSelf();
 }

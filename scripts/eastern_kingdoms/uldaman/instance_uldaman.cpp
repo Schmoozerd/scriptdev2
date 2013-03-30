@@ -331,13 +331,11 @@ void AddSC_instance_uldaman()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_uldaman";
+    pNewScript = new Script("instance_uldaman");
     pNewScript->GetInstanceData = &GetInstanceData_instance_uldaman;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_altar_boss_aggro";
+    pNewScript = new Script("event_spell_altar_boss_aggro");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_altar_boss_aggro;
     pNewScript->RegisterSelf();
 }

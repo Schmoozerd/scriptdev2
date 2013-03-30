@@ -209,13 +209,11 @@ void AddSC_boss_jindo()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_jindo";
+    pNewScript = new Script("boss_jindo");
     pNewScript->GetAI = &GetAI_boss_jindo;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_healing_ward";
+    pNewScript = new Script("mob_healing_ward");
     pNewScript->GetAI = &GetAI_mob_healing_ward;
     pNewScript->RegisterSelf();
 }

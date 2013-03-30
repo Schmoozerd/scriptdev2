@@ -227,13 +227,11 @@ void AddSC_boss_vexallus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_vexallus";
+    pNewScript = new Script("boss_vexallus");
     pNewScript->GetAI = &GetAI_boss_vexallus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_pure_energy";
+    pNewScript = new Script("mob_pure_energy");
     pNewScript->GetAI = &GetAI_mob_pure_energy;
     pNewScript->RegisterSelf();
 }

@@ -180,13 +180,11 @@ void AddSC_boss_warp_splinter()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_warp_splinter";
+    pNewScript = new Script("boss_warp_splinter");
     pNewScript->GetAI = &GetAI_boss_warp_splinter;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_warp_splinter_treant";
+    pNewScript = new Script("mob_warp_splinter_treant");
     pNewScript->GetAI = &GetAI_npc_sapling;
     pNewScript->RegisterSelf();
 }

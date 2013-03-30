@@ -167,8 +167,7 @@ void AddSC_boss_maiden_of_grief()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_maiden_of_grief";
+    pNewScript = new Script("boss_maiden_of_grief");
     pNewScript->GetAI = &GetAI_boss_maiden_of_grief;
     pNewScript->RegisterSelf();
 }

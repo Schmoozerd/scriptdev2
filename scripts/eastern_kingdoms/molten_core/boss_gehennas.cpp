@@ -123,8 +123,7 @@ void AddSC_boss_gehennas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gehennas";
+    pNewScript = new Script("boss_gehennas");
     pNewScript->GetAI = &GetAI_boss_gehennas;
     pNewScript->RegisterSelf();
 }

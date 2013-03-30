@@ -175,13 +175,11 @@ void AddSC_boss_garr()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_garr";
+    pNewScript = new Script("boss_garr");
     pNewScript->GetAI = &GetAI_boss_garr;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_firesworn";
+    pNewScript = new Script("mob_firesworn");
     pNewScript->GetAI = &GetAI_mob_firesworn;
     pNewScript->RegisterSelf();
 }

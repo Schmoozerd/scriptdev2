@@ -311,13 +311,11 @@ void AddSC_boss_exarch_maladaar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_exarch_maladaar";
+    pNewScript = new Script("boss_exarch_maladaar");
     pNewScript->GetAI = &GetAI_boss_exarch_maladaar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_stolen_soul";
+    pNewScript = new Script("mob_stolen_soul");
     pNewScript->GetAI = &GetAI_mob_stolen_soul;
     pNewScript->RegisterSelf();
 }

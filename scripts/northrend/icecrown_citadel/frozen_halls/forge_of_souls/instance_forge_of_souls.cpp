@@ -207,8 +207,7 @@ void AddSC_instance_forge_of_souls()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_forge_of_souls";
+    pNewScript = new Script("instance_forge_of_souls");
     pNewScript->GetInstanceData = &GetInstanceData_instance_forge_of_souls;
     pNewScript->RegisterSelf();
 }

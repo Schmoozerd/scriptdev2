@@ -424,24 +424,20 @@ void AddSC_howling_fjord()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ancient_male_vrykul";
+    pNewScript = new Script("npc_ancient_male_vrykul");
     pNewScript->GetAI = &GetAI_npc_ancient_male_vrykul;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_ancient_male_vrykul";
+    pNewScript = new Script("at_ancient_male_vrykul");
     pNewScript->pAreaTrigger = &AreaTrigger_at_ancient_male_vrykul;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_daegarn";
+    pNewScript = new Script("npc_daegarn");
     pNewScript->GetAI = &GetAI_npc_daegarn;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_daegarn;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_silvermoon_harry";
+    pNewScript = new Script("npc_silvermoon_harry");
     pNewScript->GetAI = &GetAI_npc_silvermoon_harry;
     pNewScript->pGossipHello = &GossipHello_npc_silvermoon_harry;
     pNewScript->pGossipSelect = &GossipSelect_npc_silvermoon_harry;

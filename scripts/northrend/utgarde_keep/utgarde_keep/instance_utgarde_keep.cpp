@@ -175,8 +175,7 @@ void AddSC_instance_utgarde_keep()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_utgarde_keep";
+    pNewScript = new Script("instance_utgarde_keep");
     pNewScript->GetInstanceData = GetInstanceData_instance_utgarde_keep;
     pNewScript->RegisterSelf();
 }

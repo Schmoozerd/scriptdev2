@@ -112,8 +112,7 @@ void AddSC_stranglethorn_vale()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_yenniku";
+    pNewScript = new Script("mob_yenniku");
     pNewScript->GetAI = &GetAI_mob_yenniku;
     pNewScript->RegisterSelf();
 }

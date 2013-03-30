@@ -386,28 +386,23 @@ void AddSC_northrend_beasts()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_beast_combat_stalker";
+    pNewScript = new Script("npc_beast_combat_stalker");
     pNewScript->GetAI = &GetAI_npc_beast_combat_stalker;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gormok";
+    pNewScript = new Script("boss_gormok");
     pNewScript->GetAI = &GetAI_boss_gormok;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_acidmaw";
+    pNewScript = new Script("boss_acidmaw");
     pNewScript->GetAI = &GetAI_boss_acidmaw;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_dreadscale";
+    pNewScript = new Script("boss_dreadscale");
     pNewScript->GetAI = &GetAI_boss_dreadscale;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_icehowl";
+    pNewScript = new Script("boss_icehowl");
     pNewScript->GetAI = &GetAI_boss_icehowl;
     pNewScript->RegisterSelf();
 }

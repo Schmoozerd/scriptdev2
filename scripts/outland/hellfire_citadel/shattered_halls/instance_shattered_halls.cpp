@@ -293,13 +293,11 @@ void AddSC_instance_shattered_halls()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_shattered_halls";
+    pNewScript = new Script("instance_shattered_halls");
     pNewScript->GetInstanceData = &GetInstanceData_instance_shattered_halls;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_shattered_halls";
+    pNewScript = new Script("at_shattered_halls");
     pNewScript->pAreaTrigger = &AreaTrigger_at_shattered_halls;
     pNewScript->RegisterSelf();
 }

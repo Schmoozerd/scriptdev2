@@ -298,13 +298,11 @@ void AddSC_boss_the_lurker_below()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_the_lurker_below";
+    pNewScript = new Script("boss_the_lurker_below");
     pNewScript->GetAI = &GetAI_boss_the_lurker_below;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_strange_pool";
+    pNewScript = new Script("go_strange_pool");
     pNewScript->pGOUse = &GOUse_go_strange_pool;
     pNewScript->RegisterSelf();
 }

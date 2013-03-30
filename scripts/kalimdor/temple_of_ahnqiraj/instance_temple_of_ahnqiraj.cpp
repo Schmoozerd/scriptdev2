@@ -281,13 +281,11 @@ void AddSC_instance_temple_of_ahnqiraj()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_temple_of_ahnqiraj";
+    pNewScript = new Script("instance_temple_of_ahnqiraj");
     pNewScript->GetInstanceData = &GetInstanceData_instance_temple_of_ahnqiraj;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_temple_ahnqiraj";
+    pNewScript = new Script("at_temple_ahnqiraj");
     pNewScript->pAreaTrigger = &AreaTrigger_at_temple_ahnqiraj;
     pNewScript->RegisterSelf();
 }

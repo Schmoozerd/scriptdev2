@@ -806,23 +806,19 @@ void AddSC_boss_cthun()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_eye_of_cthun";
+    pNewScript = new Script("boss_eye_of_cthun");
     pNewScript->GetAI = &GetAI_boss_eye_of_cthun;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_cthun";
+    pNewScript = new Script("boss_cthun");
     pNewScript->GetAI = &GetAI_boss_cthun;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_giant_claw_tentacle";
+    pNewScript = new Script("mob_giant_claw_tentacle");
     pNewScript->GetAI = &GetAI_npc_giant_claw_tentacle;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_stomach_cthun";
+    pNewScript = new Script("at_stomach_cthun");
     pNewScript->pAreaTrigger = &AreaTrigger_at_stomach_cthun;
     pNewScript->RegisterSelf();
 }

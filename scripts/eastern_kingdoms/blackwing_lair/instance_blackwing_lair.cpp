@@ -244,8 +244,7 @@ void AddSC_instance_blackwing_lair()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_blackwing_lair";
+    pNewScript = new Script("instance_blackwing_lair");
     pNewScript->GetInstanceData = &GetInstanceData_instance_blackwing_lair;
     pNewScript->RegisterSelf();
 }

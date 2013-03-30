@@ -313,13 +313,11 @@ void AddSC_boss_ouro()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ouro";
+    pNewScript = new Script("boss_ouro");
     pNewScript->GetAI = &GetAI_boss_ouro;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ouro_spawner";
+    pNewScript = new Script("npc_ouro_spawner");
     pNewScript->GetAI = &GetAI_npc_ouro_spawner;
     pNewScript->RegisterSelf();
 }

@@ -294,8 +294,7 @@ void AddSC_boss_garfrost()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_forgemaster_garfrost";
+    pNewScript = new Script("boss_forgemaster_garfrost");
     pNewScript->GetAI = &GetAI_boss_forgemaster_garfrost;
     pNewScript->RegisterSelf();
 }

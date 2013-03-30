@@ -148,8 +148,7 @@ void AddSC_boss_eck()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_eck";
+    pNewScript = new Script("boss_eck");
     pNewScript->GetAI = &GetAI_boss_eck;
     pNewScript->RegisterSelf();
 }

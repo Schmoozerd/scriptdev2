@@ -403,18 +403,15 @@ void AddSC_boss_krick_and_ick()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ick";
+    pNewScript = new Script("boss_ick");
     pNewScript->GetAI = &GetAI_boss_ick;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_krick";
+    pNewScript = new Script("boss_krick");
     pNewScript->GetAI = &GetAI_boss_krick;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_exploding_orb";
+    pNewScript = new Script("npc_exploding_orb");
     pNewScript->GetAI = &GetAI_npc_exploding_orb;
     pNewScript->RegisterSelf();
 }

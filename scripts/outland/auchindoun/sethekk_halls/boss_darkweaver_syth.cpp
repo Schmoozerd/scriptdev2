@@ -224,8 +224,7 @@ void AddSC_boss_darkweaver_syth()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_darkweaver_syth";
+    pNewScript = new Script("boss_darkweaver_syth");
     pNewScript->GetAI = &GetAI_boss_darkweaver_syth;
     pNewScript->RegisterSelf();
 }

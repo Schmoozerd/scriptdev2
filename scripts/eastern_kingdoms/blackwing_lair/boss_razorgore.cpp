@@ -171,8 +171,7 @@ void AddSC_boss_razorgore()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_razorgore";
+    pNewScript = new Script("boss_razorgore");
     pNewScript->GetAI = &GetAI_boss_razorgore;
     pNewScript->RegisterSelf();
 }

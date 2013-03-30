@@ -1140,50 +1140,41 @@ void AddSC_netherstorm()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_manaforge_control_console";
+    pNewScript = new Script("go_manaforge_control_console");
     pNewScript->pGOUse = &GOUse_go_manaforge_control_console;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_manaforge_control_console";
+    pNewScript = new Script("npc_manaforge_control_console");
     pNewScript->GetAI = &GetAI_npc_manaforge_control_console;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_commander_dawnforge";
+    pNewScript = new Script("npc_commander_dawnforge");
     pNewScript->GetAI = GetAI_npc_commander_dawnforge;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_commander_dawnforge";
+    pNewScript = new Script("at_commander_dawnforge");
     pNewScript->pAreaTrigger = &AreaTrigger_at_commander_dawnforge;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_bessy";
+    pNewScript = new Script("npc_bessy");
     pNewScript->GetAI = &GetAI_npc_bessy;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_bessy;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_maxx_a_million";
+    pNewScript = new Script("npc_maxx_a_million");
     pNewScript->GetAI = &GetAI_npc_maxx_a_million;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_maxx_a_million;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_zeppit";
+    pNewScript = new Script("npc_zeppit");
     pNewScript->GetAI = &GetAI_npc_zeppit;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_protectorate_demolitionist";
+    pNewScript = new Script("npc_protectorate_demolitionist");
     pNewScript->GetAI = &GetAI_npc_protectorate_demolitionist;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_captured_vanguard";
+    pNewScript = new Script("npc_captured_vanguard");
     pNewScript->GetAI = &GetAI_npc_captured_vanguard;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_captured_vanguard;
     pNewScript->RegisterSelf();

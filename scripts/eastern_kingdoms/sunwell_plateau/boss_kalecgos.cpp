@@ -567,18 +567,15 @@ void AddSC_boss_kalecgos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kalecgos";
+    pNewScript = new Script("boss_kalecgos");
     pNewScript->GetAI = &GetAI_boss_kalecgos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_sathrovarr";
+    pNewScript = new Script("boss_sathrovarr");
     pNewScript->GetAI = &GetAI_boss_sathrovarr;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kalecgos_humanoid";
+    pNewScript = new Script("boss_kalecgos_humanoid");
     pNewScript->GetAI = &GetAI_boss_kalecgos_humanoid;
     pNewScript->RegisterSelf();
 }

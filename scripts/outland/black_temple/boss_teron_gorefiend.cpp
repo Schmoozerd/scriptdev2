@@ -220,8 +220,7 @@ void AddSC_boss_teron_gorefiend()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_teron_gorefiend";
+    pNewScript = new Script("boss_teron_gorefiend");
     pNewScript->GetAI = &GetAI_boss_teron_gorefiend;
     pNewScript->RegisterSelf();
 }

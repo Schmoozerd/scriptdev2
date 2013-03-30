@@ -343,13 +343,11 @@ void AddSC_boss_auriaya()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_auriaya";
+    pNewScript = new Script("boss_auriaya");
     pNewScript->GetAI = GetAI_boss_auriaya;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_feral_defender";
+    pNewScript = new Script("boss_feral_defender");
     pNewScript->GetAI = &GetAI_boss_feral_defender;
     pNewScript->RegisterSelf();
 }

@@ -408,13 +408,11 @@ void AddSC_boss_novos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_novos";
+    pNewScript = new Script("boss_novos");
     pNewScript->GetAI = &GetAI_boss_novos;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_crystal_channel_target";
+    pNewScript = new Script("npc_crystal_channel_target");
     pNewScript->GetAI = &GetAI_npc_crystal_channel_target;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_npc_crystal_channel_target;
     pNewScript->RegisterSelf();

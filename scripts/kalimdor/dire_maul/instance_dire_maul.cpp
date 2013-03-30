@@ -458,8 +458,7 @@ void AddSC_instance_dire_maul()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_dire_maul";
+    pNewScript = new Script("instance_dire_maul");
     pNewScript->GetInstanceData = &GetInstanceData_instance_dire_maul;
     pNewScript->RegisterSelf();
 }

@@ -306,13 +306,11 @@ void AddSC_boss_baltharus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_baltharus";
+    pNewScript = new Script("boss_baltharus");
     pNewScript->GetAI = &GetAI_boss_baltharus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_baltharus_clone";
+    pNewScript = new Script("npc_baltharus_clone");
     pNewScript->GetAI = &GetAI_npc_baltharus_clone;
     pNewScript->RegisterSelf();
 }

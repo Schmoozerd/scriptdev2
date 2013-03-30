@@ -220,8 +220,7 @@ void AddSC_boss_festergut()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_festergut";
+    pNewScript = new Script("boss_festergut");
     pNewScript->GetAI = &GetAI_boss_festergut;
     pNewScript->RegisterSelf();
 }

@@ -221,8 +221,7 @@ void AddSC_boss_loken()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_loken";
+    pNewScript = new Script("boss_loken");
     pNewScript->GetAI = &GetAI_boss_loken;
     pNewScript->RegisterSelf();
 }

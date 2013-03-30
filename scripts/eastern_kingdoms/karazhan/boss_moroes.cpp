@@ -277,8 +277,7 @@ void AddSC_boss_moroes()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_moroes";
+    pNewScript = new Script("boss_moroes");
     pNewScript->GetAI = &GetAI_boss_moroes;
     pNewScript->RegisterSelf();
 }

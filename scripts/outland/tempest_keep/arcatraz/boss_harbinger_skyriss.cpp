@@ -183,8 +183,7 @@ void AddSC_boss_harbinger_skyriss()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_harbinger_skyriss";
+    pNewScript = new Script("boss_harbinger_skyriss");
     pNewScript->GetAI = &GetAI_boss_harbinger_skyriss;
     pNewScript->RegisterSelf();
 }

@@ -211,8 +211,7 @@ void AddSC_boss_najentus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_najentus";
+    pNewScript = new Script("boss_najentus");
     pNewScript->GetAI = &GetAI_boss_najentus;
     pNewScript->RegisterSelf();
 }

@@ -153,8 +153,7 @@ void AddSC_boss_aeonus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_aeonus";
+    pNewScript = new Script("boss_aeonus");
     pNewScript->GetAI = &GetAI_boss_aeonus;
     pNewScript->RegisterSelf();
 }

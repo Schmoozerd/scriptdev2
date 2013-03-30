@@ -159,8 +159,7 @@ void AddSC_boss_azuregos()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_azuregos";
+    pNewScript = new Script("boss_azuregos");
     pNewScript->GetAI = &GetAI_boss_azuregos;
     pNewScript->RegisterSelf();
 }

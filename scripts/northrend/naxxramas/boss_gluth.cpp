@@ -238,8 +238,7 @@ void AddSC_boss_gluth()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gluth";
+    pNewScript = new Script("boss_gluth");
     pNewScript->GetAI = &GetAI_boss_gluth;
     pNewScript->RegisterSelf();
 }

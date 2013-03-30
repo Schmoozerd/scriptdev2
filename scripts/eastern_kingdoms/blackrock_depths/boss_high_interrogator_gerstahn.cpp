@@ -107,8 +107,7 @@ void AddSC_boss_high_interrogator_gerstahn()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_high_interrogator_gerstahn";
+    pNewScript = new Script("boss_high_interrogator_gerstahn");
     pNewScript->GetAI = &GetAI_boss_high_interrogator_gerstahn;
     pNewScript->RegisterSelf();
 }

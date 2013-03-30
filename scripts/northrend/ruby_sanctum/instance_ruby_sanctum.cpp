@@ -311,8 +311,7 @@ void AddSC_instance_ruby_sanctum()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_ruby_sanctum";
+    pNewScript = new Script("instance_ruby_sanctum");
     pNewScript->GetInstanceData = &GetInstanceData_instance_ruby_sanctum;
     pNewScript->RegisterSelf();
 }

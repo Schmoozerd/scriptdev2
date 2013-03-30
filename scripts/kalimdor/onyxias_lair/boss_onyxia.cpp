@@ -463,8 +463,7 @@ void AddSC_boss_onyxia()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_onyxia";
+    pNewScript = new Script("boss_onyxia");
     pNewScript->GetAI = &GetAI_boss_onyxia;
     pNewScript->RegisterSelf();
 }

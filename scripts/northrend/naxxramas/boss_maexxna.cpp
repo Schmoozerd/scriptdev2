@@ -314,13 +314,11 @@ void AddSC_boss_maexxna()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_maexxna";
+    pNewScript = new Script("boss_maexxna");
     pNewScript->GetAI = &GetAI_boss_maexxna;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_web_wrap";
+    pNewScript = new Script("npc_web_wrap");
     pNewScript->GetAI = &GetAI_npc_web_wrap;
     pNewScript->RegisterSelf();
 }

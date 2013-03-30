@@ -209,8 +209,7 @@ void AddSC_trial_of_the_crusader()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_barrett_ramsey";
+    pNewScript = new Script("npc_barrett_ramsey");
     pNewScript->GetAI = &GetAI_npc_barrett_ramsey;
     pNewScript->pGossipHello = &GossipHello_npc_barrett_ramsey;
     pNewScript->pGossipSelect = &GossipSelect_npc_barrett_ramsey;

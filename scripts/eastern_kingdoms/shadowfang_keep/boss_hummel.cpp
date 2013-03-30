@@ -261,13 +261,11 @@ void AddSC_boss_hummel()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_valentine_boss_manager";
+    pNewScript = new Script("npc_valentine_boss_manager");
     pNewScript->GetAI = GetAI_npc_valentine_boss_manager;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_apothecary_hummel";
+    pNewScript = new Script("npc_apothecary_hummel");
     pNewScript->pQuestRewardedNPC = &QuestRewarded_npc_apothecary_hummel;
     pNewScript->RegisterSelf();
 }

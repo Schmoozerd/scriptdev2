@@ -174,13 +174,11 @@ void AddSC_instance_sethekk_halls()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_sethekk_halls";
+    pNewScript = new Script("instance_sethekk_halls");
     pNewScript->GetInstanceData = &GetInstanceData_instance_sethekk_halls;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_summon_raven_god";
+    pNewScript = new Script("event_spell_summon_raven_god");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_summon_raven_god;
     pNewScript->RegisterSelf();
 }

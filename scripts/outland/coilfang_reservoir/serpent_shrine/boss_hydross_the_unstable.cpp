@@ -364,8 +364,7 @@ void AddSC_boss_hydross_the_unstable()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_hydross_the_unstable";
+    pNewScript = new Script("boss_hydross_the_unstable");
     pNewScript->GetAI = &GetAI_boss_hydross_the_unstable;
     pNewScript->RegisterSelf();
 }

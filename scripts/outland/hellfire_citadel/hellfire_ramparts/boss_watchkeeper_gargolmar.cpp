@@ -170,8 +170,7 @@ void AddSC_boss_watchkeeper_gargolmar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_watchkeeper_gargolmar";
+    pNewScript = new Script("boss_watchkeeper_gargolmar");
     pNewScript->GetAI = &GetAI_boss_watchkeeper_gargolmarAI;
     pNewScript->RegisterSelf();
 }

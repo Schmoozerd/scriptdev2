@@ -447,23 +447,19 @@ void AddSC_boss_muru()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_muru";
+    pNewScript = new Script("boss_muru");
     pNewScript->GetAI = &GetAI_boss_muru;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_entropius";
+    pNewScript = new Script("boss_entropius");
     pNewScript->GetAI = &GetAI_boss_entropius;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_portal_target";
+    pNewScript = new Script("npc_portal_target");
     pNewScript->GetAI = &GetAI_npc_portal_target;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_void_sentinel_summoner";
+    pNewScript = new Script("npc_void_sentinel_summoner");
     pNewScript->GetAI = &GetAI_npc_void_sentinel_summoner;
     pNewScript->RegisterSelf();
 }

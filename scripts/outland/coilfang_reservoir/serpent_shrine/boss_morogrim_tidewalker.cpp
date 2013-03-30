@@ -282,13 +282,11 @@ void AddSC_boss_morogrim_tidewalker()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_morogrim_tidewalker";
+    pNewScript = new Script("boss_morogrim_tidewalker");
     pNewScript->GetAI = &GetAI_boss_morogrim_tidewalker;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_water_globule";
+    pNewScript = new Script("mob_water_globule");
     pNewScript->GetAI = &GetAI_mob_water_globule;
     pNewScript->RegisterSelf();
 }

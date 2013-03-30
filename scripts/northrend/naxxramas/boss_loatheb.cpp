@@ -184,8 +184,7 @@ void AddSC_boss_loatheb()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_loatheb";
+    pNewScript = new Script("boss_loatheb");
     pNewScript->GetAI = &GetAI_boss_loatheb;
     pNewScript->RegisterSelf();
 }

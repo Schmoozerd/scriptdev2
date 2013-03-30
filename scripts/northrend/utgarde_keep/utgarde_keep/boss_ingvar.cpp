@@ -381,13 +381,11 @@ void AddSC_boss_ingvar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ingvar";
+    pNewScript = new Script("boss_ingvar");
     pNewScript->GetAI = &GetAI_boss_ingvar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_annhylde";
+    pNewScript = new Script("npc_annhylde");
     pNewScript->GetAI = &GetAI_npc_annhylde;
     pNewScript->RegisterSelf();
 }

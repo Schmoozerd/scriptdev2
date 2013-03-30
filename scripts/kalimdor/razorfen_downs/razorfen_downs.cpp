@@ -291,8 +291,7 @@ void AddSC_razorfen_downs()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_belnistrasz";
+    pNewScript = new Script("npc_belnistrasz");
     pNewScript->GetAI = &GetAI_npc_belnistrasz;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_belnistrasz;
     pNewScript->RegisterSelf();

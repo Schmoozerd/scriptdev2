@@ -202,8 +202,7 @@ void AddSC_boss_patchwerk()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_patchwerk";
+    pNewScript = new Script("boss_patchwerk");
     pNewScript->GetAI = &GetAI_boss_patchwerk;
     pNewScript->RegisterSelf();
 }

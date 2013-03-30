@@ -342,8 +342,7 @@ void AddSC_instance_draktharon_keep()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_draktharon_keep";
+    pNewScript = new Script("instance_draktharon_keep");
     pNewScript->GetInstanceData = &GetInstanceData_instance_draktharon_keep;
     pNewScript->RegisterSelf();
 }

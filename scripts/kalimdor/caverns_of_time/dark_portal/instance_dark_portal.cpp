@@ -398,13 +398,11 @@ void AddSC_instance_dark_portal()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_dark_portal";
+    pNewScript = new Script("instance_dark_portal");
     pNewScript->GetInstanceData = &GetInstanceData_instance_dark_portal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_dark_portal";
+    pNewScript = new Script("at_dark_portal");
     pNewScript->pAreaTrigger = &AreaTrigger_at_dark_portal;
     pNewScript->RegisterSelf();
 }

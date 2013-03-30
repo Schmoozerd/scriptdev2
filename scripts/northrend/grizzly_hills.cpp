@@ -99,8 +99,7 @@ void AddSC_grizzly_hills()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_depleted_war_golem";
+    pNewScript = new Script("npc_depleted_war_golem");
     pNewScript->GetAI = &GetAI_npc_depleted_war_golem;
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_npc_depleted_war_golem;
     pNewScript->RegisterSelf();

@@ -181,14 +181,12 @@ void AddSC_loch_modan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_mountaineer_pebblebitty";
+    pNewScript = new Script("npc_mountaineer_pebblebitty");
     pNewScript->pGossipHello =  &GossipHello_npc_mountaineer_pebblebitty;
     pNewScript->pGossipSelect = &GossipSelect_npc_mountaineer_pebblebitty;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_miran";
+    pNewScript = new Script("npc_miran");
     pNewScript->GetAI = &GetAI_npc_miran;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_miran;
     pNewScript->RegisterSelf();

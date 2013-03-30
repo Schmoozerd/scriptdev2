@@ -151,8 +151,7 @@ void AddSC_boss_moam()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_moam";
+    pNewScript = new Script("boss_moam");
     pNewScript->GetAI = &GetAI_boss_moam;
     pNewScript->RegisterSelf();
 }

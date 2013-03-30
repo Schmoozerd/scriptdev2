@@ -214,8 +214,7 @@ void AddSC_boss_grobbulus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_grobbulus";
+    pNewScript = new Script("boss_grobbulus");
     pNewScript->GetAI = &GetAI_boss_grobbulus;
     pNewScript->RegisterSelf();
 }

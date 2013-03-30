@@ -2909,69 +2909,57 @@ void AddSC_ebon_hold()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_a_special_surprise";
+    pNewScript = new Script("npc_a_special_surprise");
     pNewScript->GetAI = &GetAI_npc_a_special_surprise;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_death_knight_initiate";
+    pNewScript = new Script("npc_death_knight_initiate");
     pNewScript->GetAI = &GetAI_npc_death_knight_initiate;
     pNewScript->pGossipHello = &GossipHello_npc_death_knight_initiate;
     pNewScript->pGossipSelect = &GossipSelect_npc_death_knight_initiate;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_koltira_deathweaver";
+    pNewScript = new Script("npc_koltira_deathweaver");
     pNewScript->GetAI = &GetAI_npc_koltira_deathweaver;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_koltira_deathweaver;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_unworthy_initiate";
+    pNewScript = new Script("npc_unworthy_initiate");
     pNewScript->GetAI = &GetAI_npc_unworthy_initiate;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_unworthy_initiate_anchor";
+    pNewScript = new Script("npc_unworthy_initiate_anchor");
     pNewScript->GetAI = &GetAI_npc_unworthy_initiate_anchor;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_acherus_soul_prison";
+    pNewScript = new Script("go_acherus_soul_prison");
     pNewScript->pGOUse = &GOUse_go_acherus_soul_prison;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_eye_of_acherus";
+    pNewScript = new Script("npc_eye_of_acherus");
     pNewScript->GetAI = &GetAI_npc_eye_of_acherus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_scarlet_ghoul";
+    pNewScript = new Script("npc_scarlet_ghoul");
     pNewScript->GetAI = &GetAI_npc_scarlet_ghoul;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_scarlet_ghoul;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_highlord_darion_mograine";
+    pNewScript = new Script("npc_highlord_darion_mograine");
     pNewScript->GetAI = &GetAI_npc_highlord_darion_mograine;
     pNewScript->pGossipHello =  &GossipHello_npc_highlord_darion_mograine;
     pNewScript->pGossipSelect = &GossipSelect_npc_highlord_darion_mograine;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_fellow_death_knight";
+    pNewScript = new Script("npc_fellow_death_knight");
     pNewScript->GetAI = &GetAI_npc_fellow_death_knight;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lich_king_light_dawn";
+    pNewScript = new Script("npc_lich_king_light_dawn");
     pNewScript->GetAI = &GetAI_npc_lich_king_light_dawn;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_acherus_deathcharger";
+    pNewScript = new Script("npc_acherus_deathcharger");
     pNewScript->GetAI = &GetAI_npc_acherus_deathcharger;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_npc_acherus_deathcharger;
     pNewScript->RegisterSelf();

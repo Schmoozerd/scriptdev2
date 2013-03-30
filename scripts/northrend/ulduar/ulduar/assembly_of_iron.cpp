@@ -752,18 +752,15 @@ void AddSC_boss_assembly_of_iron()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_brundir";
+    pNewScript = new Script("boss_brundir");
     pNewScript->GetAI = GetAI_boss_brundir;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_molgeim";
+    pNewScript = new Script("boss_molgeim");
     pNewScript->GetAI = GetAI_boss_molgeim;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_steelbreaker";
+    pNewScript = new Script("boss_steelbreaker");
     pNewScript->GetAI = GetAI_boss_steelbreaker;
     pNewScript->RegisterSelf();
 }

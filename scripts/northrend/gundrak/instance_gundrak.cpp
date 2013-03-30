@@ -479,13 +479,11 @@ void AddSC_instance_gundrak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_gundrak_altar";
+    pNewScript = new Script("go_gundrak_altar");
     pNewScript->pGOUse = &GOUse_go_gundrak_altar;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_gundrak";
+    pNewScript = new Script("instance_gundrak");
     pNewScript->GetInstanceData = &GetInstanceData_instance_gundrak;
     pNewScript->RegisterSelf();
 }

@@ -535,13 +535,11 @@ void AddSC_boss_gothik()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gothik";
+    pNewScript = new Script("boss_gothik");
     pNewScript->GetAI = &GetAI_boss_gothik;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "spell_anchor";
+    pNewScript = new Script("spell_anchor");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_anchor;
     pNewScript->RegisterSelf();
 }

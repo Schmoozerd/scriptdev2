@@ -240,8 +240,7 @@ void AddSC_boss_heigan()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_heigan";
+    pNewScript = new Script("boss_heigan");
     pNewScript->GetAI = &GetAI_boss_heigan;
     pNewScript->RegisterSelf();
 }

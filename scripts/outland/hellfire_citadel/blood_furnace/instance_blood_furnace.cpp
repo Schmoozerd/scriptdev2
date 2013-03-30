@@ -411,13 +411,11 @@ void AddSC_instance_blood_furnace()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_blood_furnace";
+    pNewScript = new Script("instance_blood_furnace");
     pNewScript->GetInstanceData = &GetInstanceData_instance_blood_furnace;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_prison_cell_lever";
+    pNewScript = new Script("go_prison_cell_lever");
     pNewScript->pGOUse = &GOUse_go_prison_cell_lever;
     pNewScript->RegisterSelf();
 }

@@ -493,8 +493,7 @@ void AddSC_boss_professor_putricide()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_professor_putricide";
+    pNewScript = new Script("boss_professor_putricide");
     pNewScript->GetAI = &GetAI_boss_professor_putricide;
     pNewScript->RegisterSelf();
 }

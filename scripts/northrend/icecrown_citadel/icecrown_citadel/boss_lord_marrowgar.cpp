@@ -302,8 +302,7 @@ void AddSC_boss_lord_marrowgar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_lord_marrowgar";
+    pNewScript = new Script("boss_lord_marrowgar");
     pNewScript->GetAI = &GetAI_boss_lord_marrowgar;
     pNewScript->RegisterSelf();
 }

@@ -232,13 +232,11 @@ void AddSC_boss_archaedas()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_archaedas";
+    pNewScript = new Script("boss_archaedas");
     pNewScript->GetAI = &GetAI_boss_archaedas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_archaeras_add";
+    pNewScript = new Script("mob_archaeras_add");
     pNewScript->GetAI = &GetAI_npc_archaeras_add;
     pNewScript->RegisterSelf();
 }

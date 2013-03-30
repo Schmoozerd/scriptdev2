@@ -154,8 +154,7 @@ void AddSC_undercity()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_lady_sylvanas_windrunner";
+    pNewScript = new Script("npc_lady_sylvanas_windrunner");
     pNewScript->GetAI = &GetAI_npc_lady_sylvanas_windrunner;
     pNewScript->pQuestRewardedNPC = &QuestRewarded_npc_lady_sylvanas_windrunner;
     pNewScript->RegisterSelf();

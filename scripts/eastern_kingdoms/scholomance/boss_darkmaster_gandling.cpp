@@ -122,8 +122,7 @@ void AddSC_boss_darkmaster_gandling()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_darkmaster_gandling";
+    pNewScript = new Script("boss_darkmaster_gandling");
     pNewScript->GetAI = &GetAI_boss_darkmaster_gandling;
     pNewScript->RegisterSelf();
 }

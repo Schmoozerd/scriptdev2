@@ -413,13 +413,11 @@ void AddSC_boss_twinemperors()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_veknilash";
+    pNewScript = new Script("boss_veknilash");
     pNewScript->GetAI = &GetAI_boss_veknilash;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_veklor";
+    pNewScript = new Script("boss_veklor");
     pNewScript->GetAI = &GetAI_boss_veklor;
     pNewScript->RegisterSelf();
 }

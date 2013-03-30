@@ -451,15 +451,13 @@ void AddSC_burning_steppes()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ragged_john";
+    pNewScript = new Script("npc_ragged_john");
     pNewScript->GetAI = &GetAI_npc_ragged_john;
     pNewScript->pGossipHello =  &GossipHello_npc_ragged_john;
     pNewScript->pGossipSelect = &GossipSelect_npc_ragged_john;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_grark_lorkrub";
+    pNewScript = new Script("npc_grark_lorkrub");
     pNewScript->GetAI = &GetAI_npc_grark_lorkrub;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_grark_lorkrub;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_capture_grark;

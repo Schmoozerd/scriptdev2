@@ -376,13 +376,11 @@ void AddSC_boss_jeklik()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_jeklik";
+    pNewScript = new Script("boss_jeklik");
     pNewScript->GetAI = &GetAI_boss_jeklik;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_gurubashi_bat_rider";
+    pNewScript = new Script("npc_gurubashi_bat_rider");
     pNewScript->GetAI = &GetAI_npc_gurubashi_bat_rider;
     pNewScript->RegisterSelf();
 }

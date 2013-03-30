@@ -190,8 +190,7 @@ void AddSC_boss_void_reaver()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_void_reaver";
+    pNewScript = new Script("boss_void_reaver");
     pNewScript->GetAI = &GetAI_boss_void_reaver;
     pNewScript->RegisterSelf();
 }

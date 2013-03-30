@@ -151,8 +151,7 @@ void AddSC_utgarde_keep()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_dragonflayer_forge_master";
+    pNewScript = new Script("mob_dragonflayer_forge_master");
     pNewScript->GetAI = &GetAI_mob_dragonflayer_forge_master;
     pNewScript->RegisterSelf();
 }

@@ -137,8 +137,7 @@ void AddSC_boss_baron_geddon()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_baron_geddon";
+    pNewScript = new Script("boss_baron_geddon");
     pNewScript->GetAI = &GetAI_boss_baron_geddon;
     pNewScript->RegisterSelf();
 }

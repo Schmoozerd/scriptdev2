@@ -318,13 +318,11 @@ void AddSC_boss_grandmaster_vorpil()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_grandmaster_vorpil";
+    pNewScript = new Script("boss_grandmaster_vorpil");
     pNewScript->GetAI = &GetAI_boss_grandmaster_vorpil;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_void_traveler";
+    pNewScript = new Script("npc_void_traveler");
     pNewScript->GetAI = &GetAI_npc_void_traveler;
     pNewScript->RegisterSelf();
 }

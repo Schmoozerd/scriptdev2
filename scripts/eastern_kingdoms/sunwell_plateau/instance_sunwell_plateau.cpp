@@ -411,13 +411,11 @@ void AddSC_instance_sunwell_plateau()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_sunwell_plateau";
+    pNewScript = new Script("instance_sunwell_plateau");
     pNewScript->GetInstanceData = &GetInstanceData_instance_sunwell_plateau;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "at_sunwell_plateau";
+    pNewScript = new Script("at_sunwell_plateau");
     pNewScript->pAreaTrigger = &AreaTrigger_at_sunwell_plateau;
     pNewScript->RegisterSelf();
 }

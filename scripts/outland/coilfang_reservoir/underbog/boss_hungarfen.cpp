@@ -178,13 +178,11 @@ void AddSC_boss_hungarfen()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_hungarfen";
+    pNewScript = new Script("boss_hungarfen");
     pNewScript->GetAI = &GetAI_boss_hungarfen;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_underbog_mushroom";
+    pNewScript = new Script("mob_underbog_mushroom");
     pNewScript->GetAI = &GetAI_mob_underbog_mushroom;
     pNewScript->RegisterSelf();
 }

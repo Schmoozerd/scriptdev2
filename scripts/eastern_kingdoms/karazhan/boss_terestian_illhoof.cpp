@@ -286,18 +286,15 @@ void AddSC_boss_terestian_illhoof()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_terestian_illhoof";
+    pNewScript = new Script("boss_terestian_illhoof");
     pNewScript->GetAI = &GetAI_boss_terestian_illhoof;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_fiendish_portal";
+    pNewScript = new Script("npc_fiendish_portal");
     pNewScript->GetAI = &GetAI_npc_fiendish_portal;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_demon_chain";
+    pNewScript = new Script("mob_demon_chain");
     pNewScript->GetAI = &GetAI_mob_demon_chain;
     pNewScript->RegisterSelf();
 }

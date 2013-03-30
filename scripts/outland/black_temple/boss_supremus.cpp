@@ -318,18 +318,15 @@ void AddSC_boss_supremus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_supremus";
+    pNewScript = new Script("boss_supremus");
     pNewScript->GetAI = &GetAI_boss_supremus;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "molten_flame";
+    pNewScript = new Script("molten_flame");
     pNewScript->GetAI = &GetAI_molten_flame;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_volcano";
+    pNewScript = new Script("npc_volcano");
     pNewScript->GetAI = &GetAI_npc_volcano;
     pNewScript->RegisterSelf();
 }

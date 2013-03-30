@@ -344,14 +344,12 @@ void AddSC_boss_attumen()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_attumen";
+    pNewScript = new Script("boss_attumen");
     pNewScript->GetAI = &GetAI_boss_attumen;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_mount_attumen;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_midnight";
+    pNewScript = new Script("boss_midnight");
     pNewScript->GetAI = &GetAI_boss_midnight;
     pNewScript->RegisterSelf();
 }

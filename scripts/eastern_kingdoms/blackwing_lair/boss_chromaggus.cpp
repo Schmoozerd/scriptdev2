@@ -251,8 +251,7 @@ void AddSC_boss_chromaggus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_chromaggus";
+    pNewScript = new Script("boss_chromaggus");
     pNewScript->GetAI = &GetAI_boss_chromaggus;
     pNewScript->RegisterSelf();
 }

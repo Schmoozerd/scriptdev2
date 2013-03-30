@@ -253,8 +253,7 @@ void AddSC_instance_oculus()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_oculus";
+    pNewScript = new Script("instance_oculus");
     pNewScript->GetInstanceData = &GetInstanceData_instance_oculus;
     pNewScript->RegisterSelf();
 }

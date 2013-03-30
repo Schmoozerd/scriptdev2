@@ -198,19 +198,16 @@ void AddSC_boss_gortok()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gortok";
+    pNewScript = new Script("boss_gortok");
     pNewScript->GetAI = &GetAI_boss_gortok;
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_awaken_gortok;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_gortok_subboss";
+    pNewScript = new Script("npc_gortok_subboss");
     pNewScript->pEffectAuraDummy = &EffectAuraDummy_spell_aura_dummy_awaken_subboss;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_spell_gortok_event";
+    pNewScript = new Script("event_spell_gortok_event");
     pNewScript->pProcessEventId = &ProcessEventId_event_spell_gortok_event;
     pNewScript->RegisterSelf();
 }

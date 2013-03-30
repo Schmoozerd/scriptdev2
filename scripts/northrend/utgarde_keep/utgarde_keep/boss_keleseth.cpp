@@ -342,13 +342,11 @@ void AddSC_boss_keleseth()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_keleseth";
+    pNewScript = new Script("boss_keleseth");
     pNewScript->GetAI = &GetAI_boss_keleseth;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_vrykul_skeleton";
+    pNewScript = new Script("mob_vrykul_skeleton");
     pNewScript->GetAI = &GetAI_mob_vrykul_skeleton;
     pNewScript->RegisterSelf();
 }

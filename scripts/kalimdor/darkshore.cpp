@@ -549,27 +549,23 @@ void AddSC_darkshore()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kerlonian";
+    pNewScript = new Script("npc_kerlonian");
     pNewScript->GetAI = &GetAI_npc_kerlonian;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_kerlonian;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_prospector_remtravel";
+    pNewScript = new Script("npc_prospector_remtravel");
     pNewScript->GetAI = &GetAI_npc_prospector_remtravel;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_prospector_remtravel;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_threshwackonator";
+    pNewScript = new Script("npc_threshwackonator");
     pNewScript->GetAI = &GetAI_npc_threshwackonator;
     pNewScript->pGossipHello = &GossipHello_npc_threshwackonator;
     pNewScript->pGossipSelect = &GossipSelect_npc_threshwackonator;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_volcor";
+    pNewScript = new Script("npc_volcor");
     pNewScript->GetAI = &GetAI_npc_volcor;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_volcor;
     pNewScript->RegisterSelf();

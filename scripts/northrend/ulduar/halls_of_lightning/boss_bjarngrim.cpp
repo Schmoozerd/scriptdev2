@@ -395,13 +395,11 @@ void AddSC_boss_bjarngrim()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_bjarngrim";
+    pNewScript = new Script("boss_bjarngrim");
     pNewScript->GetAI = &GetAI_boss_bjarngrim;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_stormforged_lieutenant";
+    pNewScript = new Script("mob_stormforged_lieutenant");
     pNewScript->GetAI = &GetAI_mob_stormforged_lieutenant;
     pNewScript->RegisterSelf();
 }

@@ -468,8 +468,7 @@ void AddSC_boss_majordomo()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_majordomo";
+    pNewScript = new Script("boss_majordomo");
     pNewScript->pEffectDummyNPC = &EffectDummyCreature_spell_boss_majordomo;
     pNewScript->pGossipHello = &GossipHello_boss_majordomo;
     pNewScript->pGossipSelect = &GossipSelect_boss_majordomo;

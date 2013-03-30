@@ -292,8 +292,7 @@ void AddSC_boss_hadronox()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_hadronox";
+    pNewScript = new Script("boss_hadronox");
     pNewScript->GetAI = &GetAI_boss_hadronox;
     pNewScript->RegisterSelf();
 }

@@ -406,13 +406,11 @@ void AddSC_boss_archimonde()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_archimonde";
+    pNewScript = new Script("boss_archimonde");
     pNewScript->GetAI = &GetAI_boss_archimonde;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_doomfire_spirit";
+    pNewScript = new Script("npc_doomfire_spirit");
     pNewScript->GetAI = &GetAI_npc_doomfire_spirit;
     pNewScript->RegisterSelf();
 }

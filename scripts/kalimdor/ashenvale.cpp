@@ -600,31 +600,26 @@ void AddSC_ashenvale()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_muglash";
+    pNewScript = new Script("npc_muglash");
     pNewScript->GetAI = &GetAI_npc_muglash;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_muglash;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_naga_brazier";
+    pNewScript = new Script("go_naga_brazier");
     pNewScript->pGOUse = &GOUse_go_naga_brazier;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_ruul_snowhoof";
+    pNewScript = new Script("npc_ruul_snowhoof");
     pNewScript->GetAI = &GetAI_npc_ruul_snowhoofAI;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_ruul_snowhoof;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_torek";
+    pNewScript = new Script("npc_torek");
     pNewScript->GetAI = &GetAI_npc_torek;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_torek;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_feero_ironhand";
+    pNewScript = new Script("npc_feero_ironhand");
     pNewScript->GetAI = &GetAI_npc_feero_ironhand;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_feero_ironhand;
     pNewScript->RegisterSelf();

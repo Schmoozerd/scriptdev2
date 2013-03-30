@@ -176,19 +176,16 @@ void AddSC_zangarmarsh()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_cooshcoosh";
+    pNewScript = new Script("npc_cooshcoosh");
     pNewScript->GetAI = &GetAI_npc_cooshcoosh;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_kayra_longmane";
+    pNewScript = new Script("npc_kayra_longmane");
     pNewScript->GetAI = &GetAI_npc_kayra_longmane;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_kayra_longmane;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "event_taxi_stormcrow";
+    pNewScript = new Script("event_taxi_stormcrow");
     pNewScript->pProcessEventId = &ProcessEventId_event_taxi_stormcrow;
     pNewScript->RegisterSelf();
 }

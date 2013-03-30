@@ -336,8 +336,7 @@ void AddSC_boss_ragnaros()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_ragnaros";
+    pNewScript = new Script("boss_ragnaros");
     pNewScript->GetAI = &GetAI_boss_ragnaros;
     pNewScript->RegisterSelf();
 }

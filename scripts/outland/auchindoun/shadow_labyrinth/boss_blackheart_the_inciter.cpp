@@ -153,8 +153,7 @@ void AddSC_boss_blackheart_the_inciter()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_blackheart_the_inciter";
+    pNewScript = new Script("boss_blackheart_the_inciter");
     pNewScript->GetAI = &GetAI_boss_blackheart_the_inciter;
     pNewScript->RegisterSelf();
 }

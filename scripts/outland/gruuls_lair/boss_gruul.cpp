@@ -260,8 +260,7 @@ void AddSC_boss_gruul()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_gruul";
+    pNewScript = new Script("boss_gruul");
     pNewScript->GetAI = &GetAI_boss_gruul;
     pNewScript->RegisterSelf();
 }

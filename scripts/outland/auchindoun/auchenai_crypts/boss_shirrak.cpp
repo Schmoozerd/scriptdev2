@@ -145,8 +145,7 @@ void AddSC_boss_shirrak()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_shirrak";
+    pNewScript = new Script("boss_shirrak");
     pNewScript->GetAI = &GetAI_boss_shirrak;
     pNewScript->RegisterSelf();
 }

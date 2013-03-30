@@ -263,8 +263,7 @@ void AddSC_boss_mr_smite()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_mr_smite";
+    pNewScript = new Script("boss_mr_smite");
     pNewScript->GetAI = &GetAI_boss_mr_smite;
     pNewScript->RegisterSelf();
 }

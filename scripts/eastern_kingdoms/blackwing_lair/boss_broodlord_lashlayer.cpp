@@ -137,8 +137,7 @@ void AddSC_boss_broodlord()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_broodlord";
+    pNewScript = new Script("boss_broodlord");
     pNewScript->GetAI = &GetAI_boss_broodlord;
     pNewScript->RegisterSelf();
 }

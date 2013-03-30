@@ -285,13 +285,11 @@ void AddSC_boss_arlokk()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_arlokk";
+    pNewScript = new Script("boss_arlokk");
     pNewScript->GetAI = &GetAI_boss_arlokk;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "go_gong_of_bethekk";
+    pNewScript = new Script("go_gong_of_bethekk");
     pNewScript->pGOUse = &GOUse_go_gong_of_bethekk;
     pNewScript->RegisterSelf();
 }

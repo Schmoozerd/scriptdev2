@@ -184,14 +184,12 @@ void AddSC_orgrimmar()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_shenthul";
+    pNewScript = new Script("npc_shenthul");
     pNewScript->GetAI = &GetAI_npc_shenthul;
     pNewScript->pQuestAcceptNPC =  &QuestAccept_npc_shenthul;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_thrall_warchief";
+    pNewScript = new Script("npc_thrall_warchief");
     pNewScript->pGossipHello =  &GossipHello_npc_thrall_warchief;
     pNewScript->pGossipSelect = &GossipSelect_npc_thrall_warchief;
     pNewScript->RegisterSelf();

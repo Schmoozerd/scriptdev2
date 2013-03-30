@@ -313,8 +313,7 @@ void AddSC_eastern_plaguelands()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_eris_havenfire";
+    pNewScript = new Script("npc_eris_havenfire");
     pNewScript->GetAI = &GetAI_npc_eris_havenfire;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_eris_havenfire;
     pNewScript->RegisterSelf();

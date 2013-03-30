@@ -250,13 +250,11 @@ void AddSC_boss_erekem()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_erekem";
+    pNewScript = new Script("boss_erekem");
     pNewScript->GetAI = &GetAI_boss_erekem;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_erekem_guard";
+    pNewScript = new Script("npc_erekem_guard");
     pNewScript->GetAI = &GetAI_npc_erekem_guard;
     pNewScript->RegisterSelf();
 }

@@ -569,8 +569,7 @@ void AddSC_boss_kelthuzad()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "boss_kelthuzad";
+    pNewScript = new Script("boss_kelthuzad");
     pNewScript->GetAI = &GetAI_boss_kelthuzad;
     pNewScript->RegisterSelf();
 }

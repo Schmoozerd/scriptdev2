@@ -151,8 +151,7 @@ void AddSC_instance_wailing_caverns()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_wailing_caverns";
+    pNewScript = new Script("instance_wailing_caverns");
     pNewScript->GetInstanceData = &GetInstanceData_instance_wailing_caverns;
     pNewScript->RegisterSelf();
 }

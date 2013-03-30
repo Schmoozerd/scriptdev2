@@ -150,8 +150,7 @@ void AddSC_instance_gruuls_lair()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "instance_gruuls_lair";
+    pNewScript = new Script("instance_gruuls_lair");
     pNewScript->GetInstanceData = &GetInstanceData_instance_gruuls_lair;
     pNewScript->RegisterSelf();
 }

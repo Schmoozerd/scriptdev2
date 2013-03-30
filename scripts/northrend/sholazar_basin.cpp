@@ -412,22 +412,19 @@ void AddSC_sholazar_basin()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_helice";
+    pNewScript = new Script("npc_helice");
     pNewScript->GetAI = &GetAI_npc_helice;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_helice;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_injured_rainspeaker";
+    pNewScript = new Script("npc_injured_rainspeaker");
     pNewScript->GetAI = &GetAI_npc_injured_rainspeaker;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_injured_rainspeaker;
     // pNewScript->pGossipHello = &GossipHello_npc_injured_rainspeaker;
     // pNewScript->pGossipSelect = &GossipSelect_npc_injured_rainspeaker;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_mosswalker_victim";
+    pNewScript = new Script("npc_mosswalker_victim");
     pNewScript->pGossipHello = &GossipHello_npc_mosswalker_victim;
     pNewScript->pGossipSelect = &GossipSelect_npc_mosswalker_victim;
     pNewScript->RegisterSelf();

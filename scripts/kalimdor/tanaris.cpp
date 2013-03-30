@@ -542,30 +542,25 @@ void AddSC_tanaris()
 {
     Script* pNewScript;
 
-    pNewScript = new Script;
-    pNewScript->Name = "mob_aquementas";
+    pNewScript = new Script("mob_aquementas");
     pNewScript->GetAI = &GetAI_mob_aquementas;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_custodian_of_time";
+    pNewScript = new Script("npc_custodian_of_time");
     pNewScript->GetAI = &GetAI_npc_custodian_of_time;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_oox17tn";
+    pNewScript = new Script("npc_oox17tn");
     pNewScript->GetAI = &GetAI_npc_oox17tn;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_oox17tn;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_stone_watcher_of_norgannon";
+    pNewScript = new Script("npc_stone_watcher_of_norgannon");
     pNewScript->pGossipHello =  &GossipHello_npc_stone_watcher_of_norgannon;
     pNewScript->pGossipSelect = &GossipSelect_npc_stone_watcher_of_norgannon;
     pNewScript->RegisterSelf();
 
-    pNewScript = new Script;
-    pNewScript->Name = "npc_tooga";
+    pNewScript = new Script("npc_tooga");
     pNewScript->GetAI = &GetAI_npc_tooga;
     pNewScript->pQuestAcceptNPC = &QuestAccept_npc_tooga;
     pNewScript->RegisterSelf();
