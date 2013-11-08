@@ -862,7 +862,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
     {
         OUT_SAVE_INST_DATA;
 
-        // Save all encounters, hard bosses, keepers and teleporters
+        // Save all encounters, hard bosses, keepers and towers
         std::ostringstream saveStream;
         saveStream << m_auiEncounter[0] << " " << m_auiEncounter[1] << " " << m_auiEncounter[2] << " "
                    << m_auiEncounter[3] << " " << m_auiEncounter[4] << " " << m_auiEncounter[5] << " "
