@@ -46,6 +46,7 @@ struct UlduarKeeperSpawns
     uint32 uiEntry, uiType;
 };
 
+// TODO Naming convention - this is no memeber, hence no m_
 static UlduarKeeperSpawns m_aKeepersSpawnLocs[] =
 {
     {1945.682f, 33.34201f,  411.4408f, 5.270f, NPC_KEEPER_FREYA,   TYPE_FREYA},
@@ -268,6 +269,7 @@ void instance_ulduar::OnObjectCreate(GameObject* pGo)
                 pGo->SetGoState(GO_STATE_ACTIVE);
             break;
         case GO_HODIR_CRYSTAL:
+            // TODO - maybe better use the GetData and type version instead of hardcoded magic 0..3 ? (not really required)
             if (m_auiUlduarTowers[0] == FAIL)
                 pGo->SetGoState(GO_STATE_ACTIVE);
             break;
@@ -456,6 +458,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
                         if (!pDefender->isAlive())
                             pDefender->Respawn();
                         else
+                            // TODO Maybe better EnterEvadeMode ? - might have some unexpected effects otherwise (do not know if this can happen)
                             pDefender->GetMotionMaster()->MoveTargetedHome();
                     }
                 }
@@ -465,7 +468,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
                     {
                         if (!pEngineer->isAlive())
                             pEngineer->Respawn();
-                        else
+                        else // TODO as abvoe
                             pEngineer->GetMotionMaster()->MoveTargetedHome();
                     }
                 }
@@ -488,6 +491,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
                 // reset Harpoons: respawn the broken ones and despawn the repaired ones
                 for (GuidVector::const_iterator itr = m_vBrokenHarpoonsGuids.begin(); itr != m_vBrokenHarpoonsGuids.end(); ++itr)
                 {
+                    // Maybe use different style here and abelow: GO* pharpoone = ...; if (pHarpoon && !pHarpoon->isSpawned) pHarpoon->Respawn(); // Has one line and indent less
                     if (GameObject* pHarpoon = instance->GetGameObject(*itr))
                     {
                         if (!pHarpoon->isSpawned())
@@ -699,6 +703,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
             if (uiData == DONE)
             {
                 // despawn elders which are still alive on event complete
+                // TODO Similar code style as above use " if (pElder && pElder->isAlive) pElder->ForcedDespawn(); " - also possible use an array with npc-entries and a for loop.
                 if (Creature* pElder = GetSingleCreatureFromStorage(NPC_ELDER_BRIGHTLEAF))
                 {
                     if (pElder->isAlive())
@@ -783,6 +788,7 @@ void instance_ulduar::SetData(uint32 uiType, uint32 uiData)
             break;
 
             // Hard modes (not saved)
+            // TODO - possible you can simplify this and the next block with something like m_auiHardBoss[uiType - TYPE_LEVIATHAN_HARD] = uiData; for all of them
         case TYPE_LEVIATHAN_HARD:
             m_auiHardBoss[0] = uiData;
             return;
@@ -928,6 +934,12 @@ bool instance_ulduar::CheckConditionCriteriaMeet(Player const* pPlayer, uint32 u
 
 uint32 instance_ulduar::GetData(uint32 uiType) const
 {
+    /*
+    if (uiTyp < MAX_ENCOUNTEr)
+        return m_auiEncounter[uiType];
+        
+    maybe similar for the other types - goal would be to decrese lines ;)
+    */
     switch (uiType)
     {
         case TYPE_LEVIATHAN:
